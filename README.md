@@ -29,6 +29,9 @@ any tools and components that may be used during the development (such as event 
 
 ## Solution Overview
 
+This solution has two different flows (Model Data Flow and Streaming Data Flow). Model Data Flow takes in a definition of a factory, converts the data to a JSON AAS representation, and creates the AAS in Azure Digital Twins (ADT).
+Streaming Data Flow takes in the telemetry data, converts the data into a lightweight AAS representation, and updates the properties in ADT.
+
 ### Architecture
 
 ![Overall Architecture](./docs/assets/Swimlane%20-%20overall%20process.png)
