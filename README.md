@@ -75,6 +75,7 @@ any tools and components that may be used during the development (such as event 
            -c <abbreviated_company_name>
            -e <action_group_email>
            -p <resource_prefix>
+           -l westus3
          ```
 
      - This may take around **20 minutes**. This script deploys the necessary resources, the azure function code, and the initial sample blob.
