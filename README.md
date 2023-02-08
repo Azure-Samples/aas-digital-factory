@@ -1,57 +1,39 @@
-# Project Name
+# AAS Factory Azure Integrations
 
-(short, 1-3 sentenced, description of the project)
+This repository contains all required components to integrate the services with Azure Event hubs and Azure Digital Twins.
 
-## Features
+The folder structure for this repo is as below:
 
-This project framework provides the following features:
+- docs: where all technical documentation of the project located in.
+- src: contains all source code for the projects.
+  - AasFactory.Azure.Functions:
+  a folder with all implemented Azure functions and their required components such as services, repositories, interfaces and exceptions.
+  - AasFactory.Azure.Models:
+  containing all AAS models and other shared models that will be used across Azure functions and services.
+  It also contains all event hub contracts and any other components that encapsulating a specific logic to easily work with EventHub.
+  - AasFactory.Services: contains any utility services shared across multiple Functions, e.g. a service to interact with the Azure Blob Storage SDK.
+- tests:
+containing all projects required for testing including unit-testing, component testing, integration testing, performance and end-2-end testing.
+All unit/component tests will utilize xUnit framework.
+- tools:
+any tools and components that may be used during the development (such as event hub event producer)
+or CI/CD required shell commands (such as powershell files)
 
-* Feature 1
-* Feature 2
-* ...
+## Prerequisites
 
-## Getting Started
+## Local Development
 
-### Prerequisites
+In order to work with this repo in your local development environment, you will need to install the following packages:
 
-(ideally very short, if any)
+- [.Net 6.0](https://dotnet.microsoft.com/en-us/download)
+- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+- [Azure Functions Core Tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false)
+- [Azurite](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite?tabs=visual-studio)
+  - After installation, it needs to be manually started using Azurite commands
+- All required extensions will be recommended to be installed when opening the workspace (check extensions.json file in .vscode folder).
 
-- OS
-- Library version
-- ...
+## More Links
 
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+- The project uses [central package management feature](https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management).
+So all C# projects that need to to install a nuget package,
+they should specify the version of the nuget package in Directory.Packages.props file in solution level.

@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ms-azuretools.vscode-azurefunctions",
+    "ms-dotnettools.csharp",
+    "ms-vscode.azure-account",
+    "ms-azuretools.vscode-azureresourcegroups",
+    "ms-azuretools.vscode-azureterraform",
+    "azurite.azurite",
+    "hashicorp.terraform",
+    "fernandoescolar.vscode-solution-explorer",
+    "davidanson.vscode-markdownlint"
+  ]
+}

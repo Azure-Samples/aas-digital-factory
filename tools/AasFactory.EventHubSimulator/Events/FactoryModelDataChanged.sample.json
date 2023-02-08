@@ -1,0 +1,9 @@
+{
+    "eventHubName": "factory-model-data-changed-eh",
+    "data": [
+        {
+            "Path": "Factory.json",
+            "OutputFileName": "sample-workspace"
+        }
+    ]
+}

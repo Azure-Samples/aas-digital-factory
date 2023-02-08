@@ -1,0 +1,8 @@
+{
+    "EVENT_HUB_CONNECTION_STRING": "<event_hub_connection_stirng>",
+    "EVENT_HUB_NAME": "<event_hub_name>",
+    "BLOB_STORAGE_CONNECTION_STRING": "<blob_storage_connection_string>",
+    "BLOB_STORAGE_CONTAINER": "<blob_container>",
+    "BLOB_STORAGE_BLOB_PATH": "<blob_path_in_container>",
+    "TIME_BETWEEN_EVENTS_SEC": 30
+}

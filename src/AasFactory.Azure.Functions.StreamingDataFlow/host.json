@@ -1,0 +1,36 @@
+{
+    "version": "2.0",
+    "healthMonitor": {
+        "enabled": true,
+        "healthCheckInterval": "00:00:10",
+        "healthCheckWindow": "00:02:00",
+        "healthCheckThreshold": 6,
+        "counterThreshold": 0.80
+    },
+    "logging": {
+        "fileLoggingMode": "debugOnly",
+        "includeScopes": true,
+        "logLevel": {
+            "Function": "Information",
+            "AasFactory": "Information",
+            "default": "Error"
+        },
+        "applicationInsights": {
+            "samplingSettings": {
+                "isEnabled": true,
+                "maxTelemetryItemsPerSecond" : 20,
+                "evaluationInterval": "01:00:00",
+                "initialSamplingPercentage": 100.0, 
+                "samplingPercentageIncreaseTimeout" : "00:00:01",
+                "samplingPercentageDecreaseTimeout" : "00:00:01",
+                "minSamplingPercentage": 0.1,
+                "maxSamplingPercentage": 100.0,
+                "movingAverageRatio": 1.0,
+                "ExcludedTypes" : "Trace,Exception"
+            },
+            "enableLiveMetrics": true,
+            "enableDependencyTracking": true,
+            "enablePerformanceCountersCollection": true
+        }
+    }
+}

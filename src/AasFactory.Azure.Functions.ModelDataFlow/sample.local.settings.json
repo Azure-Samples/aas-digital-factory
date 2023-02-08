@@ -1,0 +1,17 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "",
+    "AAS_EVENT_HUB_NAME": "aas-modeldatachanged-evh",
+    "ADT_INSTANCE_URL": "https://instanceName.yourGeo.digitaltwins.azure.net",
+    "EVENT_HUB_CONNECTION_STRING": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "STORAGE_ACCOUNT_CONNECTION_STRING": "",
+    "STORAGE_ACCOUNT_CONTAINER_NAME": "model-data-container",
+    "AZURE_TENANT_ID": "",
+    "CONTINUE_ON_ADT_ERRORS": true,
+    "SIMMY_DEPENDENCY_FAULT_TOLERANCE": "<If set, one out of Adt, Redis, or Storage>",
+    "SIMMY_INJECTION_RATE": 0,
+    "AzureWebJobsStorage": ""
+  }
+}

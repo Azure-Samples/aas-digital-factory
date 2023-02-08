@@ -1,0 +1,5 @@
+{
+    "EVENT_HUB_CONNECTION_STRING": "<event hub connection string>",
+    "EVENT_DETAILS_FILE": "Events/AasModelDataChanged.json",
+    "EVENT_TYPE": "<1 = Factory Model Event V1, 2 = AAS Model Event V1, 3 = Factory Telemetry Event V1, 4 = AAS Telemetry Event V1>"
+}
