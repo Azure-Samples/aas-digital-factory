@@ -1,5 +1,8 @@
 # AAS Factory Azure Integrations <!-- omit in toc -->
 
+- [Solution Overview](#solution-overview)
+  - [Architecture](#architecture)
+  - [Technologies Used](#technologies-used)
 - [How to use the sample](#how-to-use-the-sample)
   - [Prerequisites](#prerequisites)
     - [Software pre-requisites](#software-pre-requisites)
@@ -23,6 +26,21 @@ containing all projects required for testing including unit-testing, component t
 All unit/component tests will utilize xUnit framework.
 - tools:
 any tools and components that may be used during the development (such as event hub event producer)
+
+## Solution Overview
+
+### Architecture
+
+![Overall Architecture](./docs/assets/Swimlane%20-%20overall%20process.png)
+
+More on the overall architecture can be found [here](./docs/architecture.md).
+
+### Technologies Used
+
+- [Azure Data Explorer](https://azure.microsoft.com/en-au/products/data-explorer/)
+- [Azure Event Hubs](https://azure.microsoft.com/en-au/products/event-hubs/)
+- [Azure Functions](https://azure.microsoft.com/en-au/products/functions/)
+- [Azure Storage Account](https://azure.microsoft.com/en-au/products/storage/data-lake-storage/)
 
 ## How to use the sample
 
@@ -118,6 +136,9 @@ any tools and components that may be used during the development (such as event 
 
      - Run the program with `dotnet run`. This will trigger the streaming data flow azure functions from the `Deploying Azure Resources` step.
      - You should now see values for the properties of the machine instance on the graph.
+
+**NOTE:** There are 3 storage accounts provisioned with this solution. The storage account connection string that should be used is the storage account that is in a format of `{prefix}dev{location}sa`.
+Please note, there are two other storage accounts. These storage accounts will end in `tdsa` or `mdsa`.
 
 ## More Links
 
