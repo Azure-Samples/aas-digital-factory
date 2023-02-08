@@ -4,10 +4,6 @@ This project includes the Azure Functions that will be part of Model Data Flow.
 
 ## Sections <!-- omit in toc -->
 
-- [Model Data](#model-data)
-  - [AAS Model Data Changed Function](#aas-model-data-changed-function)
-    - [AAS Model Data Changed Event](#aas-model-data-changed-event)
-    - [AAS Data Changed Payload](#aas-data-changed-payload)
 - [Configure](#configure)
 - [Error Handling](#error-handling)
 - [Permissions](#permissions)
@@ -15,29 +11,6 @@ This project includes the Azure Functions that will be part of Model Data Flow.
   - [Prerequisites](#prerequisites)
   - [Steps](#steps)
 - [Test](#test)
-
-## Model Data
-
-### AAS Model Data Changed Function
-
-This function acts on an Event Hub message containing the path to the AAS model data and the workspace id.
-The function will read the file from storage and write the data to ADT (Azure Digital Twins) using the ADT SDK.
-
-#### AAS Model Data Changed Event
-
-```json
-{
-    "Path": "<path to some aas json file>",
-    "Workspace": "sample123"
-}
-```
-
-- **Path**: The path to the file in blob storage. Path should not include the container name in the prefix.
-- **Workspace**: The id of the pipeline that triggered the function.
-
-#### AAS Data Changed Payload
-
-The json file in blob storage is expected to conform to the definition of the message from [this design doc](../../docs/model-data-raw-to-aas.md).
 
 ## Configure
 
