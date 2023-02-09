@@ -68,6 +68,8 @@ The following configuration parameters may be defined...
 
 - **AAS_EVENT_HUB_NAME** [REQUIRED]: The Event Hub where the AAS model update events will be sent.
 
+- **ABBREVIATED_COMPANY_NAME** [REQUIRED]: The abbreviated company name. This will be used in the IRI of AAS and Submodel metamodels.
+
 - **ADT_INSTANCE_URL** [REQUIRED]: The url of the ADT instance (ex: `https://{instanceName}.{location}.digitaltwins.azure.net`).
 
 - **APPLICATIONINSIGHTS_CONNECTION_STRING** [OPTIONAL]: The application insights connection string.
@@ -76,8 +78,6 @@ The following configuration parameters may be defined...
   This can also reference the blob emulator if running locally.
 
 - **AZURE_TENANT_ID** [OPTIONAL]: The tenant id of the Azure Directory where ADT instance is part of
-
-- **FUNCTIONS_WORKER_RUNTIME** [REQUIRED]: This should be set to "dotnet".
 
 - **EVENT_HUB_CONNECTION_STRING** [REQUIRED]: The connection string of the Event Hub namespace used.
 Note that when running without managed identity,
@@ -90,6 +90,8 @@ In this case, the managed identity trying to connect to the Event Hub would also
 For more information, see the [Authenticate the Client section of the Event Hubs extension package page](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.EventHubs/5.0.0-beta.7#readme-body-tab).
 
 - **FACTORY_EVENT_HUB_NAME**: [REQUIRED]: The Event Hub where the Factory model update events will be sent.
+
+- **FUNCTIONS_WORKER_RUNTIME** [REQUIRED]: This should be set to "dotnet".
 
 - **SHELLS_STORAGE_PATH** [REQUIRED]: The base path the AAS in storage where the AAS model data will be saved.
 
