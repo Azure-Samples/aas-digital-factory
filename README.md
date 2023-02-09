@@ -61,6 +61,23 @@ any tools and components that may be used during the development (such as event 
          az account set -s <AZURE_SUBSCRIPTION_ID>
          ```
 
+1. **Setup Functions**
+
+   - The Model Data Flow and Telemetry Data Flow Function Apps will need to have a `local.settings.json` file established prior to executing the deployment step.
+      This file only needs to contain the `FUNCTIONS_WORKER_RUNTIME` for the purposes of this setup.
+      If running locally, the `local.settings.json` file will have to abide by the necessary environment variables defined in the README of each project.
+
+   - The snippet below is an example of the minimum requirement for the `local.settings.json` file in the Model Data Flow and Telemetry Data Flow Function Apps.
+
+      ```json
+      {
+        "IsEncrypted": false,
+        "Values": {
+          "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+        }
+      }
+      ```
+
 1. **Deploy Azure Resources**
 
    - Run `./deploy.sh`
@@ -77,7 +94,7 @@ any tools and components that may be used during the development (such as event 
 
      - This may take around **20 minutes**. This script deploys the necessary resources, the azure function code, and the initial sample blob.
 
-1. **Trigger Model Data Flow**
+2. **Trigger Model Data Flow**
 
    - cd into `./tools/AasFactory.EventHubSimulator`
    - Follow the steps in [the README](./tools/AasFactory.EventHubSimulator/README.md)
@@ -94,7 +111,7 @@ any tools and components that may be used during the development (such as event 
    - Run the program with `dotnet run`. This will trigger the model data flow azure functions from the `Deploying Azure Resources` step.
    - You should now see a graph in the provisioned Azure Digital Twins instance.
 
-1. **Trigger Streaming Data Flow**
+3. **Trigger Streaming Data Flow**
 
     > For testing purposes Streaming data can be triggered by using the `AasFactory.EventHubSimulator`.
 
