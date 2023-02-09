@@ -31,7 +31,7 @@ resource "azurerm_storage_management_policy" "example" {
     }
     actions {
       base_blob {
-        delete_after_days_since_modification_greater_than = 100
+        delete_after_days_since_modification_greater_than = var.model_data_storage_account_retention_days
       }
     }
   }

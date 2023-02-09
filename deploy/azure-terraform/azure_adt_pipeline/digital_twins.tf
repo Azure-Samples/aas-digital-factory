@@ -76,7 +76,6 @@ resource "null_resource" "update_adt_metamodels" {
 
   triggers = {
     adt_id = azurerm_digital_twins_instance.adt.id
-    always = "${timestamp()}"
   }
 
   depends_on = [
