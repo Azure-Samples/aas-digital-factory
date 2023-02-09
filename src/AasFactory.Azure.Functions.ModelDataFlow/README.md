@@ -4,12 +4,63 @@ This project includes the Azure Functions that will be part of Model Data Flow.
 
 ## Sections <!-- omit in toc -->
 
+- [Model Data](#model-data)
+  - [Factory Model Data Changed Function](#factory-model-data-changed-function)
+    - [Factory Model Data Changed Event](#factory-model-data-changed-event)
+    - [Factory Model Data Changed Payload](#factory-model-data-changed-payload)
+  - [AAS Model Data Changed Function](#aas-model-data-changed-function)
+    - [AAS Model Data Changed Event](#aas-model-data-changed-event)
+    - [AAS Data Changed Payload](#aas-data-changed-payload)
 - [Configure](#configure)
 - [Error Handling](#error-handling)
 - [Permissions](#permissions)
 - [Run the Azure Functions locally](#run-the-azure-functions-locally)
   - [Prerequisites](#prerequisites)
   - [Steps](#steps)
+
+## Model Data
+
+### Factory Model Data Changed Function
+
+This function acts on an Event Hub message containing the path to the Factory model data and the output file name (excluding the extension).
+The function will read the file from storage and transform the contents to AAS.
+The function will then write the file to blob and send a message to trigger the AAS Model Data Changed function.
+
+#### Factory Model Data Changed Event
+
+```json
+{
+    "Path": "<path to some raw factory json file>",
+    "OutputFileName": "sample123"
+}
+```
+
+- **Path**: The path to the file in blob storage. Path should not include the container name in the prefix.
+- **OutputFileName**: The name of the blob (without the file extension) that is saved to the shell storage path.
+
+#### Factory Model Data Changed Payload
+
+An example of the Factory model data can be found in [this sample](../../samples/model-data/Factory.json).
+The logic to convert the factory data to AAS can be found in the [Factory to AAS document](../../docs/design/model-data-raw-to-aas.md).
+
+### AAS Model Data Changed Function
+
+This function acts on an Event Hub message containing the path to the AAS model data.
+The function will read the file from storage and write the data to ADT (Azure Digital Twins) using the ADT SDK.
+
+#### AAS Model Data Changed Event
+
+```json
+{
+    "Path": "<path to some aas json file>"
+}
+```
+
+- **Path**: The path to the file in blob storage. Path should not include the container name in the prefix.
+
+#### AAS Data Changed Payload
+
+The json file in blob storage is expected to conform to the definition of the message from [this design doc](../../docs/model-data-raw-to-aas.md).
 
 ## Configure
 
@@ -37,6 +88,10 @@ However, when using managed identity (as ours is when deployed), the setting sho
 in the format of just the hostname, `<your-event-hub-namespace>.servicebus.windows.net`.
 In this case, the managed identity trying to connect to the Event Hub would also need Reader and Sender permissions for it.
 For more information, see the [Authenticate the Client section of the Event Hubs extension package page](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.EventHubs/5.0.0-beta.7#readme-body-tab).
+
+- **FACTORY_EVENT_HUB_NAME**: [REQUIRED]: The Event Hub where the Factory model update events will be sent.
+
+- **SHELLS_STORAGE_PATH** [REQUIRED]: The base path the AAS in storage where the AAS model data will be saved.
 
 - **STORAGE_ACCOUNT_CONNECTION_STRING** [REQUIRED]: The connection string for the storage account.
 
