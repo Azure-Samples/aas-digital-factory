@@ -2,7 +2,6 @@
     "eventHubName": "factory-telemetry-data-changed-eh",
     "data": [
         {
-          "protocol_version": "v1",
           "header": {
             "machineId": "grill1",
             "modelType": "machineType"
