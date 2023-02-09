@@ -1,11 +1,10 @@
 using System.Diagnostics.CodeAnalysis;
 using AasFactory.Azure.Functions.Functions;
-using AasFactory.Azure.Models.EventHubs.Extensions;
 using Azure.Messaging.EventHubs;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 
-namespace AasFactory.Azure.Functions.StreamingDataFlow;
+namespace AasFactory.Azure.Functions.StreamingDataFlow.Functions;
 
 [ExcludeFromCodeCoverage]
 public class FactoryStreamingDataChangedFunction : BasicFunctionWithReturn<EventData?>

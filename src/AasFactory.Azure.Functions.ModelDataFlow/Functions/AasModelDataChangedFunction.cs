@@ -4,7 +4,7 @@ using Azure.Messaging.EventHubs;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 
-namespace AasFactory
+namespace AasFactory.Azure.Functions.ModelDataFlow.Functions
 {
     [ExcludeFromCodeCoverage]
     public class AasModelDataChangedFunction : BasicFunction
