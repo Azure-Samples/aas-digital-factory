@@ -3,7 +3,7 @@
     "data": [
         {
             "Path": "Factory.json",
-            "OutputFileName": "sample-workspace"
+            "OutputFileName": "sample-output"
         }
     ]
 }
