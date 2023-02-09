@@ -61,7 +61,7 @@ any tools and components that may be used during the development (such as event 
          az account set -s <AZURE_SUBSCRIPTION_ID>
          ```
 
-1. **Setup local.settings.json (NEEDED FOR NEXT STEP)**
+1. **Setup local.settings.json**
 
    - The Model Data Flow and Telemetry Data Flow Function Apps will need to have a `local.settings.json` file established prior to executing the deployment step.
       This file only needs to contain the `FUNCTIONS_WORKER_RUNTIME` for the purposes of this setup.
