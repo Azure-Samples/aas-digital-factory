@@ -18,9 +18,6 @@ The folder structure for this repo is as below:
   containing all AAS models and other shared models that will be used across Azure functions and services.
   It also contains all event hub contracts and any other components that encapsulating a specific logic to easily work with EventHub.
   - AasFactory.Services: contains any utility services shared across multiple Functions, e.g. a service to interact with the Azure Blob Storage SDK.
-- tests:
-containing all projects required for testing including unit-testing, component testing, integration testing, performance and end-2-end testing.
-All unit/component tests will utilize xUnit framework.
 - tools:
 any tools and components that may be used during the development (such as event hub event producer)
 

@@ -10,7 +10,6 @@ This project includes the Azure Functions that will be part of Model Data Flow.
 - [Run the Azure Functions locally](#run-the-azure-functions-locally)
   - [Prerequisites](#prerequisites)
   - [Steps](#steps)
-- [Test](#test)
 
 ## Configure
 
@@ -118,30 +117,3 @@ func start
 
 Note that if you would like to use the provided configurations and the VSCode UI to launch and/or debug the project,
 you will need to open a new window at the level of this project's `.csproj` file to get those to load properly due to the multi-root workspace setup.
-
-## Test
-
-To run unit tests go to the test project and run the command:
-
-```bash
-dotnet test
-```
-
-To run a coverage report:
-
-```bash
-dotnet test --collect:"XPlat Code Coverage"
-```
-
-To view the coverage report, you must install the report generator:
-
-```bash
-dotnet tool install -g dotnet-reportgenerator-globaltool
-```
-
-And then you can generate the report:
-
-```bash
-# use the guid returned in TestResults path. The html coverage report will be generated under the coveragereport directory.
-reportgenerator "-reports:TestResults\{guid}\coverage.cobertura.xml" "-targetdir:coveragereport" -reporttypes:Html
-```
