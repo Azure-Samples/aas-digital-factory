@@ -86,9 +86,9 @@ any tools and components that may be used during the development (such as event 
 
          ```bash
          ./deploy.sh \
-           -c <abbreviated_company_name>
-           -e <action_group_email>
-           -p <resource_prefix>
+           -c <abbreviated_company_name> \
+           -e <action_group_email> \
+           -p <resource_prefix> \
            -l westus3
          ```
 
