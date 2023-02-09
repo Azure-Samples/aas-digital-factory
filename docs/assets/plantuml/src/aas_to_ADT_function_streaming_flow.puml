@@ -1,0 +1,7 @@
+@startuml
+"Eventhub AAS/TelemetryDataChanged" -> "AAS To ADT Function": triggers
+group For each property data do
+  "AAS To ADT Function" -> "AAS To ADT Function": Generate patch document for the associated digital twin
+  "AAS To ADT Function" -> "Azure Digital Twins": Sending patch document
+end
+@enduml

@@ -1,0 +1,9 @@
+@startuml
+"Factory to AAS AZ Function" -> "Blob Storage": Save AAS model data to blob storage
+"Factory to AAS AZ Function" -> "Eventhub Namespace": Send message with AAS model data blob storage path
+"Eventhub Namespace" -> "AAS to Digital Twins AZ Function": Triggers AAS to Digital Twins function
+"AAS to Digital Twins AZ Function" -> "Blob Storage": Get AAS model data from blob path
+"Blob Storage" --> "AAS to Digital Twins AZ Function": Returns the AAS model data
+"AAS to Digital Twins AZ Function" -> "Azure Digital Twins": Push AAS model data to Azure Digital Twins
+"Azure Digital Twins" --> "AAS to Digital Twins AZ Function": Returns operation status (not atomic)
+@enduml
