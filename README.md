@@ -25,7 +25,7 @@ any tools and components that may be used during the development (such as event 
 
 ### Prerequisites
 
-1. [Azure Account](https://azure.microsoft.com/en-au/free/search/?&ef_id=Cj0KCQiAr8bwBRD4ARIsAHa4YyLdFKh7JC0jhbxhwPeNa8tmnhXciOHcYsgPfNB7DEFFGpNLTjdTPbwaAh8bEALw_wcB:G:s&OCID=AID2000051_SEM_O2ShDlJP&MarinID=O2ShDlJP_332092752199_azure%20account_e_c__63148277493_aud-390212648371:kwd-295861291340&lnkd=Google_Azure_Brand&dclid=CKjVuKOP7uYCFVapaAoddSkKcA)
+1. [Azure Account](https://azure.microsoft.com/en-us/free/)
 
      - Permissions needed: ability to create and deploy to an azure resource group.
 
