@@ -118,7 +118,11 @@ any tools and components that may be used during the development (such as event 
       ```
 
    - Run the program with `dotnet run`. This will trigger the model data flow azure functions from the `Deploying Azure Resources` step.
-   - You should now see a graph in the provisioned Azure Digital Twins instance.
+   - After running the simulator, the corresponding graph should appear in the Azure Digital Twins (ADT) instance provisioned in the deploy step.
+      For `Factory.json`, Model Data Flow should finish in about 5 minutes.
+      Larger factories will take a longer amount of time.
+      To view the graph in ADT graph, open the twin explorer and select `Run Query`.
+      For this first render of the graph, leave the query as `SELECT * FROM digitaltwins`.
 
 1. **Trigger Streaming Data Flow**
 
