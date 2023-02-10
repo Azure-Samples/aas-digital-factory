@@ -66,11 +66,10 @@ resource "azurerm_role_assignment" "service_principal_adt_role_assignment" {
   principal_id         = data.azuread_user.current_object_id.object_id
 }
 
-
 resource "null_resource" "update_adt_metamodels" {
   provisioner "local-exec" {
     command = <<EOT
-      sh azure_adt_pipeline/scripts/update_adt_models.sh  -n ${var.adt_name} -m ${var.adt_models_link} -d ${var.adt_models_directory}
+      sh azure_adt_pipeline/scripts/update_adt_models.sh -d ${var.adt_models_directory} -g ${var.resource_group_name}  -n ${var.adt_name} -m ${var.adt_models_link}
     EOT
   }
 
