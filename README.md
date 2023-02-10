@@ -99,6 +99,12 @@ any tools and components that may be used during the development (such as event 
 
 1. **Trigger Model Data Flow**
 
+   > Before triggering Model Data Flow, ensure the file `Factory.json` exists in the `{prefix}dev{location}sa` storage account.
+   > The prefix and location in the storage account name are the prefix and location used in the deploy step above.
+   > The file should exist in the `model-data-container` container.
+   > If using a custom factory definition, make sure to upload the file to the `model-data-container` container within the `{prefix}dev{location}sa` storage account.
+   > Ensure the contents of `FactoryModelDataChanged.sample.json` reflect the path to this new file within the storage account.
+
    - cd into `./tools/AasFactory.EventHubSimulator`
    - Follow the steps in [the README](./tools/AasFactory.EventHubSimulator/README.md)
    - In the end, the `local.settings.json` file should look something similar to the following
