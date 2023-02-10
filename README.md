@@ -41,12 +41,14 @@ any tools and components that may be used during the development (such as event 
 
 ### Setup and Deployment
 
-> IMPORTANT NOTE: As with all Azure Deployments, this will incur associated costs. Remember to teardown all related resources after use to avoid unnecessary costs.
+> IMPORTANT NOTE 1: Please **do not** copy this example and use it in production! This solution is not production ready.
+
+> IMPORTANT NOTE 2: As with all Azure Deployments, this will incur associated costs. Remember to teardown all related resources after use to avoid unnecessary costs.
 > This deployment was tested using Git Bash on Windows.
 
 1. **Pull down the repository and cd into the root**
 
-1. **Azure CLI Setup**
+2. **Azure CLI Setup**
 
    - Ensure that:
      - You are logged in to the Azure CLI. To login, run
@@ -61,7 +63,7 @@ any tools and components that may be used during the development (such as event 
          az account set -s <AZURE_SUBSCRIPTION_ID>
          ```
 
-1. **Setup local.settings.json**
+3. **Setup local.settings.json**
 
    - The Model Data Flow and Telemetry Data Flow Function Apps will need to have a `local.settings.json` file established prior to executing the deployment step.
       This file only needs to contain the `FUNCTIONS_WORKER_RUNTIME` for the purposes of this setup.
@@ -78,7 +80,7 @@ any tools and components that may be used during the development (such as event 
       }
       ```
 
-1. **Deploy Azure Resources**
+4. **Deploy Azure Resources**
 
    - Run `./deploy.sh`
 
@@ -97,7 +99,7 @@ any tools and components that may be used during the development (such as event 
           If there are any errors, please attempt to fix the error(s) and rerun the deploy script.
           If the attempt to fix the error does not work, please submit an issue.
 
-1. **Trigger Model Data Flow**
+5. **Trigger Model Data Flow**
 
    > Before triggering Model Data Flow, ensure the file `Factory.json` exists in the `{prefix}dev{location}sa` storage account.
    > The prefix and location in the storage account name are the prefix and location used in the deploy step above.
@@ -124,7 +126,7 @@ any tools and components that may be used during the development (such as event 
       To view the graph in ADT graph, open the twin explorer and select `Run Query`.
       For this first render of the graph, leave the query as `SELECT * FROM digitaltwins`.
 
-1. **Trigger Streaming Data Flow**
+6. **Trigger Streaming Data Flow**
 
     > For testing purposes Streaming data can be triggered by using the `AasFactory.EventHubSimulator`.
 
