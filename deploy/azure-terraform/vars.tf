@@ -267,12 +267,6 @@ variable "model_data_storage_account_retention_days" {
   default     = 90
 }
 
-variable "aas_metamodels_path" {
-  type        = string
-  description = "The path to the AAS metamodels."
-  default     = "../adt-aas-models"
-}
-
 variable "adt_models_link" {
   type        = string
   description = "Link to download ADT metamodel JSON files."
