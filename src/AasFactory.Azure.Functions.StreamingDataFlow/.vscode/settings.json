@@ -1,0 +1,9 @@
+{
+  "azureFunctions.deploySubpath": "${workspaceFolder}/bin/Release/net6.0/publish",
+  "azureFunctions.projectLanguage": "C#",
+  "azureFunctions.projectRuntime": "~4",
+  "debug.internalConsoleOptions": "neverOpen",
+  "azureFunctions.projectSubpath": ".",
+  "azureFunctions.preDeployTask": "publish (functions)",
+  "azurite.location": "${workspaceFolder}"
+}

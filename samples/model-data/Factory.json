@@ -1,0 +1,230 @@
+{
+	"factory": [
+		{
+			"id": "contoso",
+			"modelType": "factory",
+			"name": "contoso",
+			"displayName": "Contoso",
+			"placeName": "Washington, USA",
+			"timezone": "PST",
+			"machines": [
+				{
+					"id": "grill1",
+					"name": "grill1"
+				},
+				{
+					"id": "oven1",
+					"name": "oven1"
+				},
+				{
+					"id": "dishWasher1",
+					"name": "dishWasher1"
+				}
+			],
+			"lines": [
+				{
+					"id": "line1",
+					"name": "line1"
+				}
+			]
+		}
+	],
+	"line": [
+		{
+			"id": "line1",
+			"modelType": "line",
+			"name": "line1",
+			"displayName": "Line 1",
+			"factory": {
+				"id": "contoso",
+				"name": "contoso"
+			},
+			"topology": [
+				{
+					"id": "grill1",
+					"name": "grill1",
+					"successors": [
+						{
+							"id": "oven1",
+							"name": "oven1"
+						}
+					]
+				},
+				{
+					"id": "oven1",
+					"name": "oven1",
+					"successors": [
+						{
+							"id": "dishWasher1",
+							"name": "dishwasher1"
+						}
+					],
+					"predecessors": [
+						{
+							"id": "grill1",
+							"name": "grill1"
+						}
+					]
+				},
+				{
+					"id": "dishWasher1",
+					"name": "dishWasher1",
+					"predecessors": [
+						{
+							"id": "oven1",
+							"name": "oven1"
+						}
+					]
+				}
+			]
+		}
+	],
+	"machineType": [
+        {
+			"id": "grill",
+			"modelType": "machineType",
+			"name": "grill",
+			"displayName": "Grill",
+			"fields": [
+                {
+                    "id": "temperature",
+                    "name": "temperature",
+                    "displayName": "Temperature",
+                    "dataType": "float64",
+                    "statType": "continuous",
+                    "unit": "°C"
+                },
+                {
+                    "id": "starttime",
+                    "name": "starttime",
+                    "displayName": "Start Time",
+                    "dataType": "datetime"
+                },
+                {
+                    "id": "endtime",
+                    "name": "endtime",
+                    "displayName": "End Time",
+                    "dataType": "datetime"
+                }
+            ]
+		},
+		{
+			"id": "oven",
+			"modelType": "machineType",
+			"name": "oven",
+			"displayName": "Oven",
+			"fields": [
+                {
+                    "id": "temperature",
+                    "name": "temperature",
+                    "displayName": "Temperature",
+                    "dataType": "float64",
+                    "statType": "continuous",
+                    "unit": "°C"
+                },
+                {
+                    "id": "starttime",
+                    "name": "starttime",
+                    "displayName": "Start Time",
+                    "dataType": "datetime"
+                },
+                {
+                    "id": "endtime",
+                    "name": "endtime",
+                    "displayName": "End Time",
+                    "dataType": "datetime"
+                }
+            ]
+		},
+        {
+			"id": "dishWasher",
+			"modelType": "machineType",
+			"name": "dishWasher",
+			"displayName": "Dish Washer",
+			"fields": [
+                {
+                    "id": "temperature",
+                    "name": "temperature",
+                    "displayName": "Temperature",
+                    "dataType": "float64",
+                    "statType": "continuous",
+                    "unit": "°C"
+                },
+                {
+                    "id": "starttime",
+                    "name": "starttime",
+                    "displayName": "Start Time",
+                    "dataType": "datetime"
+                },
+                {
+                    "id": "endtime",
+                    "name": "endtime",
+                    "displayName": "End Time",
+                    "dataType": "datetime"
+                }
+            ]
+		}
+	],
+	"machine": [
+		{
+			"id": "grill1",
+			"modelType": "machine",
+			"name": "grill1",
+			"displayName": "Grill 1",
+			"machineType": {
+				"id": "grill",
+				"name": "grill"
+			},
+			"factory": {
+				"id": "contoso",
+				"name": "contoso"
+			},
+			"lines": [
+				{
+					"id": "line1",
+					"name": "line1"
+				}
+			]
+		},
+		{
+			"id": "oven1",
+			"modelType": "machine",
+			"name": "oven1",
+			"displayName": "Oven 1",
+			"machineType": {
+				"id": "oven",
+				"name": "oven"
+			},
+			"factory": {
+				"id": "contoso",
+				"name": "contoso"
+			},
+			"lines": [
+				{
+					"id": "line1",
+					"name": "line1"
+				}
+			]
+		},
+        {
+			"id": "dishWasher1",
+			"modelType": "machine",
+			"name": "dishWasher1",
+			"displayName": "Dish Washer 1",
+			"machineType": {
+				"id": "dishWasher",
+				"name": "dishWasher"
+			},
+			"factory": {
+				"id": "contoso",
+				"name": "contoso"
+			},
+			"lines": [
+				{
+					"id": "line1",
+					"name": "line1"
+				}
+			]
+		}
+	]
+}

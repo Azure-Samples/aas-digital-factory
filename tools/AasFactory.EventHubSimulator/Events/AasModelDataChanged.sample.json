@@ -1,0 +1,8 @@
+{
+    "eventHubName": "aas-model-data-changed-eh",
+    "data": [
+        {
+            "Path": "aas/AasFactory.json"
+        }
+    ]
+}

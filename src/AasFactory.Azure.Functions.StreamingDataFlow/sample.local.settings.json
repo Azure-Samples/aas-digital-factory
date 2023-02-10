@@ -1,0 +1,17 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AAS_EVENT_HUB_NAME": "aas-streamingdatachanged-evh",
+    "ADT_INSTANCE_URL": "https://instanceName.yourGeo.digitaltwins.azure.net",
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": "",
+    "AzureWebJobsStorage": "",
+    "AZURE_TENANT_ID": "",
+    "CIRCUIT_BREAKER_ALLOWED_EXCEPTION_COUNT": 3,
+    "CIRCUIT_BREAKER_WAIT_TIME_SEC": 60,
+    "COUNTER_CACHE_EXPIRY_IN_SECONDS": 30,
+    "EVENT_HUB_CONNECTION_STRING": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "SIMMY_DEPENDENCY_FAULT_TOLERANCE": "<If set, one out of Adt, Redis, or Storage>",
+    "SIMMY_INJECTION_RATE": 0
+  }
+}
