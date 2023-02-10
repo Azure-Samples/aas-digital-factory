@@ -48,7 +48,7 @@ any tools and components that may be used during the development (such as event 
 
 1. **Pull down the repository and cd into the root**
 
-2. **Azure CLI Setup**
+1. **Azure CLI Setup**
 
    - Ensure that:
      - You are logged in to the Azure CLI. To login, run
@@ -63,7 +63,7 @@ any tools and components that may be used during the development (such as event 
          az account set -s <AZURE_SUBSCRIPTION_ID>
          ```
 
-3. **Setup local.settings.json**
+1. **Setup local.settings.json**
 
    - The Model Data Flow and Telemetry Data Flow Function Apps will need to have a `local.settings.json` file established prior to executing the deployment step.
       This file only needs to contain the `FUNCTIONS_WORKER_RUNTIME` for the purposes of this setup.
@@ -80,7 +80,7 @@ any tools and components that may be used during the development (such as event 
       }
       ```
 
-4. **Deploy Azure Resources**
+1. **Deploy Azure Resources**
 
    - Run `./deploy.sh`
 
@@ -99,7 +99,7 @@ any tools and components that may be used during the development (such as event 
           If there are any errors, please attempt to fix the error(s) and rerun the deploy script.
           If the attempt to fix the error does not work, please submit an issue.
 
-5. **Trigger Model Data Flow**
+1. **Trigger Model Data Flow**
 
    > Before triggering Model Data Flow, ensure the file `Factory.json` exists in the `{prefix}dev{location}sa` storage account.
    > The prefix and location in the storage account name are the prefix and location used in the deploy step above.
@@ -126,7 +126,7 @@ any tools and components that may be used during the development (such as event 
       To view the graph in ADT graph, open the twin explorer and select `Run Query`.
       For this first render of the graph, leave the query as `SELECT * FROM digitaltwins`.
 
-6. **Trigger Streaming Data Flow**
+1. **Trigger Streaming Data Flow**
 
     > For testing purposes Streaming data can be triggered by using the `AasFactory.EventHubSimulator`.
 
