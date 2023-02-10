@@ -73,7 +73,6 @@ main () {
         --container-name $model_data_storage_container_name \
         --file ./samples/model-data/Factory.json \
         --name Factory.json \
-        --overwrite true \
         --auth-mode login
 }
 
