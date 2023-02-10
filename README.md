@@ -93,6 +93,9 @@ any tools and components that may be used during the development (such as event 
          ```
 
      - This may take around **20 minutes**. This script deploys the necessary resources, the azure function code, and the initial sample blob.
+       - Ensure there aren't errors post running the script.
+          If there are any errors, please attempt to fix the error(s) and rerun the deploy script.
+          If the attempt to fix the error does not work, please submit an issue.
 
 1. **Trigger Model Data Flow**
 
