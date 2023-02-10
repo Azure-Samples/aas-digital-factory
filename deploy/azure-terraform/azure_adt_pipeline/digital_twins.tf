@@ -70,7 +70,7 @@ resource "azurerm_role_assignment" "service_principal_adt_role_assignment" {
 resource "null_resource" "update_adt_metamodels" {
   provisioner "local-exec" {
     command = <<EOT
-      sh azure_adt_pipeline/scripts/update_adt_models.sh  -n ${var.adt_name} -p ${var.aas_metamodels_path}
+      sh azure_adt_pipeline/scripts/update_adt_models.sh -g ${var.resource_group_name}  -n ${var.adt_name} -p ${var.aas_metamodels_path}
     EOT
   }
 
