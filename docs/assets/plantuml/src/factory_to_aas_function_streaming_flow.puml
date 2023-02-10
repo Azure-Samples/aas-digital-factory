@@ -1,5 +1,5 @@
 @startuml
-"Streaming Service" -> "Eventhub SM/TelemetryDataChanged": Streaming data
-"Eventhub SM/TelemetryDataChanged" -> "AAS Convertor Function": triggers
+"Streaming Service" -> "Eventhub Factory/TelemetryDataChanged": Streaming data
+"Eventhub Factory/TelemetryDataChanged" -> "AAS Convertor Function": triggers
 "AAS Convertor Function" -> "Eventhub AAS/TelemetryDataChanged": Sending AAS format
 @enduml
