@@ -2,7 +2,7 @@
 
 This document describes chaos testing experiments with [Simmy](https://github.com/Polly-Contrib/Simmy),
 in order to prove the behavior hypothesis.
-Per the scope of story #198, exceptions are injected for a subset of the Azure services that are used in the project:
+Exceptions are injected for a subset of the Azure services that are used in the project:
 Azure Digital Twins (ADT), Redis, and storage accounts.
 Results from these experiments across the relevant Azure Functions containing those dependencies are described below.
 
