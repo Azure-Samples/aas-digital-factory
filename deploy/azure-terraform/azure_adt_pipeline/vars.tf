@@ -281,7 +281,12 @@ variable "data_history_eventhub_message_retention" {
   description = "The message retention (in days) of the Azure Data Explorer EventHub."
 }
 
-variable "aas_metamodels_path" {
+variable "adt_models_link" {
   type        = string
-  description = "The path to the AAS metamodels."
+  description = "Link to download ADT metamodel JSON files."
+}
+
+variable "adt_models_directory" {
+  type        = string
+  description = "Directory inside adt models zip that contains the model JSON files."
 }
