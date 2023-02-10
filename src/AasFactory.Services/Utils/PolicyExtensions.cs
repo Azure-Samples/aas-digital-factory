@@ -8,16 +8,13 @@ using Polly;
 using Polly.Contrib.Simmy;
 using Polly.Contrib.Simmy.Outcomes;
 using Polly.Registry;
-using StackExchange.Redis;
 
 public static class PolicyExtensions
 {
     public const string AdtPolicyName = "adtPolicy";
     public const string AdtAsyncPolicyName = "adtAsyncPolicy";
-    public const string RedisAsyncPolicyName = "redisAsyncPolicy";
     public const string StorageAccountPolicyName = "storageAccountPolicy";
     private static string adtKey = "Adt";
-    private static string redisKey = "Redis";
     private static string storageAccountKey = "StorageAccount";
 
     /// <summary>
@@ -35,7 +32,7 @@ public static class PolicyExtensions
         int allowedExceptionCount,
         int waitTimeMinutes,
         double simmyInjectionRate,
-        string chaosDependencyTesting) // ADT, Redis, Storage Account
+        string chaosDependencyTesting) // ADT, Storage Account
     {
         if (services is null)
         {
@@ -45,7 +42,6 @@ public static class PolicyExtensions
         services
           .AddPolicyRegistry()
           .AddWrappedAdtPolicies(true, simmyInjectionRate, chaosDependencyTesting, allowedExceptionCount, waitTimeMinutes)
-          .AddWrappedRedisPolicies(simmyInjectionRate, chaosDependencyTesting)
           .AddWrappedStorageAccountPolicies(simmyInjectionRate, chaosDependencyTesting);
     }
 
@@ -60,7 +56,7 @@ public static class PolicyExtensions
     public static void AddPollyPolicies(
         this IServiceCollection services,
         double simmyInjectionRate,
-        string chaosDependencyTesting) // ADT, Redis, Storage Account
+        string chaosDependencyTesting) // ADT, Storage Account
     {
         if (services is null)
         {
@@ -70,7 +66,6 @@ public static class PolicyExtensions
         services
           .AddPolicyRegistry()
           .AddWrappedAdtPolicies(false, simmyInjectionRate, chaosDependencyTesting)
-          .AddWrappedRedisPolicies(simmyInjectionRate, chaosDependencyTesting)
           .AddWrappedStorageAccountPolicies(simmyInjectionRate, chaosDependencyTesting);
     }
 
@@ -135,37 +130,6 @@ public static class PolicyExtensions
     }
 
     /// <summary>
-    /// Combines Polly NoOp + Simmy fault policies (for Redis).
-    /// </summary>
-    /// <param name="policyRegistry">Policy Registry to add the fault Policy to</param>
-    /// <returns>void</returns>
-    private static IPolicyRegistry<string> AddWrappedRedisPolicies(
-        this IPolicyRegistry<string> policyRegistry,
-        double simmyInjectionRate,
-        string chaosDependencyTesting)
-    {
-        if (policyRegistry is null)
-        {
-            throw new ArgumentNullException(nameof(policyRegistry));
-        }
-
-        IAsyncPolicy redisPolicy;
-        if (string.Equals(chaosDependencyTesting, redisKey))
-        {
-            redisPolicy = GetRedisConnectionExceptionFaultPolicy(simmyInjectionRate);
-        }
-        else
-        {
-            redisPolicy = Policy.NoOpAsync();
-        }
-
-        policyRegistry
-            .Add(RedisAsyncPolicyName, redisPolicy);
-
-        return policyRegistry;
-    }
-
-    /// <summary>
     /// Combines Polly NoOp + Simmy fault policies (for Storage Account).
     /// </summary>
     /// <param name="policyRegistry">Policy Registry to add the fault Policy to</param>
@@ -225,17 +189,5 @@ public static class PolicyExtensions
             .Enabled());
 
         return (chaosExceptionPolicy, chaosExceptionPolicyAsync);
-    }
-
-    private static IAsyncPolicy GetRedisConnectionExceptionFaultPolicy(double injectionRate)
-    {
-        // Redis exceptiions: https://github.com/StackExchange/StackExchange.Redis/blob/main/src/StackExchange.Redis/Exceptions.cs
-        var fault = new RedisConnectionException(ConnectionFailureType.ConnectionDisposed, "Simmy: Redis connection disposed");
-        var chaosExceptionPolicy = MonkeyPolicy.InjectExceptionAsync(with =>
-          with.Fault(fault)
-            .InjectionRate(injectionRate)
-            .Enabled());
-
-        return chaosExceptionPolicy;
     }
 }

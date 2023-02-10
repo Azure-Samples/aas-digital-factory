@@ -18,7 +18,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging.ApplicationInsights" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" />
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.EventHubs" />
-    <PackageReference Include="StackExchange.Redis" />
     <PackageReference Include="StyleCop.Analyzers">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>

@@ -21,9 +21,6 @@ The folder structure for this repo is as below:
   containing all AAS models and other shared models that will be used across Azure functions and services.
   It also contains all event hub contracts and any other components that encapsulating a specific logic to easily work with EventHub.
   - AasFactory.Services: contains any utility services shared across multiple Functions, e.g. a service to interact with the Azure Blob Storage SDK.
-- tests:
-containing all projects required for testing including unit-testing, component testing, integration testing, performance and end-2-end testing.
-All unit/component tests will utilize xUnit framework.
 - tools:
 any tools and components that may be used during the development (such as event hub event producer)
 
@@ -49,7 +46,7 @@ More on the overall architecture can be found [here](./docs/architecture.md).
 
 ### Prerequisites
 
-1. [Azure Account](https://azure.microsoft.com/en-au/free/search/?&ef_id=Cj0KCQiAr8bwBRD4ARIsAHa4YyLdFKh7JC0jhbxhwPeNa8tmnhXciOHcYsgPfNB7DEFFGpNLTjdTPbwaAh8bEALw_wcB:G:s&OCID=AID2000051_SEM_O2ShDlJP&MarinID=O2ShDlJP_332092752199_azure%20account_e_c__63148277493_aud-390212648371:kwd-295861291340&lnkd=Google_Azure_Brand&dclid=CKjVuKOP7uYCFVapaAoddSkKcA)
+1. [Azure Account](https://azure.microsoft.com/en-us/free/)
 
      - Permissions needed: ability to create and deploy to an azure resource group.
 
@@ -65,7 +62,9 @@ More on the overall architecture can be found [here](./docs/architecture.md).
 
 ### Setup and Deployment
 
-> IMPORTANT NOTE: As with all Azure Deployments, this will incur associated costs. Remember to teardown all related resources after use to avoid unnecessary costs.
+> IMPORTANT NOTE 1: Please **do not** copy this example and use it in production! This solution is not production ready.
+
+> IMPORTANT NOTE 2: As with all Azure Deployments, this will incur associated costs. Remember to teardown all related resources after use to avoid unnecessary costs.
 > This deployment was tested using Git Bash on Windows.
 
 1. **Pull down the repository and cd into the root**
@@ -85,6 +84,23 @@ More on the overall architecture can be found [here](./docs/architecture.md).
          az account set -s <AZURE_SUBSCRIPTION_ID>
          ```
 
+1. **Setup local.settings.json**
+
+   - The Model Data Flow and Telemetry Data Flow Function Apps will need to have a `local.settings.json` file established prior to executing the deployment step.
+      This file only needs to contain the `FUNCTIONS_WORKER_RUNTIME` for the purposes of this setup.
+      If running locally, the `local.settings.json` file will have to abide by the necessary environment variables defined in the README of each project.
+
+   - The snippet below is an example of the minimum requirement for the `local.settings.json` file in the Model Data Flow and Telemetry Data Flow Function Apps.
+
+      ```json
+      {
+        "IsEncrypted": false,
+        "Values": {
+          "FUNCTIONS_WORKER_RUNTIME": "dotnet"
+        }
+      }
+      ```
+
 1. **Deploy Azure Resources**
 
    - Run `./deploy.sh`
@@ -93,15 +109,24 @@ More on the overall architecture can be found [here](./docs/architecture.md).
 
          ```bash
          ./deploy.sh \
-           -c <abbreviated_company_name>
-           -e <action_group_email>
-           -p <resource_prefix>
+           -c <abbreviated_company_name> \
+           -e <action_group_email> \
+           -p <resource_prefix> \
            -l westus3
          ```
 
      - This may take around **20 minutes**. This script deploys the necessary resources, the azure function code, and the initial sample blob.
+       - Ensure there aren't errors post running the script.
+          If there are any errors, please attempt to fix the error(s) and rerun the deploy script.
+          If the attempt to fix the error does not work, please submit an issue.
 
 1. **Trigger Model Data Flow**
+
+   > Before triggering Model Data Flow, ensure the file `Factory.json` exists in the `{prefix}dev{location}sa` storage account.
+   > The prefix and location in the storage account name are the prefix and location used in the deploy step above.
+   > The file should exist in the `model-data-container` container.
+   > If using a custom factory definition, make sure to upload the file to the `model-data-container` container within the `{prefix}dev{location}sa` storage account.
+   > Ensure the contents of `FactoryModelDataChanged.sample.json` reflect the path to this new file within the storage account.
 
    - cd into `./tools/AasFactory.EventHubSimulator`
    - Follow the steps in [the README](./tools/AasFactory.EventHubSimulator/README.md)
@@ -116,7 +141,11 @@ More on the overall architecture can be found [here](./docs/architecture.md).
       ```
 
    - Run the program with `dotnet run`. This will trigger the model data flow azure functions from the `Deploying Azure Resources` step.
-   - You should now see a graph in the provisioned Azure Digital Twins instance.
+   - After running the simulator, the corresponding graph should appear in the Azure Digital Twins (ADT) instance provisioned in the deploy step.
+      For `Factory.json`, Model Data Flow should finish in about 5 minutes.
+      Larger factories will take a longer amount of time.
+      To view the graph in ADT graph, open the twin explorer and select `Run Query`.
+      For this first render of the graph, leave the query as `SELECT * FROM digitaltwins`.
 
 1. **Trigger Streaming Data Flow**
 

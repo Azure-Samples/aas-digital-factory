@@ -4,40 +4,12 @@ This project includes the Azure Functions that will be part of Model Data Flow.
 
 ## Sections <!-- omit in toc -->
 
-- [Model Data](#model-data)
-  - [AAS Model Data Changed Function](#aas-model-data-changed-function)
-    - [AAS Model Data Changed Event](#aas-model-data-changed-event)
-    - [AAS Data Changed Payload](#aas-data-changed-payload)
 - [Configure](#configure)
 - [Error Handling](#error-handling)
 - [Permissions](#permissions)
 - [Run the Azure Functions locally](#run-the-azure-functions-locally)
   - [Prerequisites](#prerequisites)
   - [Steps](#steps)
-- [Test](#test)
-
-## Model Data
-
-### AAS Model Data Changed Function
-
-This function acts on an Event Hub message containing the path to the AAS model data and the workspace id.
-The function will read the file from storage and write the data to ADT (Azure Digital Twins) using the ADT SDK.
-
-#### AAS Model Data Changed Event
-
-```json
-{
-    "Path": "<path to some aas json file>",
-    "Workspace": "sample123"
-}
-```
-
-- **Path**: The path to the file in blob storage. Path should not include the container name in the prefix.
-- **Workspace**: The id of the pipeline that triggered the function.
-
-#### AAS Data Changed Payload
-
-The json file in blob storage is expected to conform to the definition of the message from [this design doc](../../docs/model-data-raw-to-aas.md).
 
 ## Configure
 
@@ -145,30 +117,3 @@ func start
 
 Note that if you would like to use the provided configurations and the VSCode UI to launch and/or debug the project,
 you will need to open a new window at the level of this project's `.csproj` file to get those to load properly due to the multi-root workspace setup.
-
-## Test
-
-To run unit tests go to the test project and run the command:
-
-```bash
-dotnet test
-```
-
-To run a coverage report:
-
-```bash
-dotnet test --collect:"XPlat Code Coverage"
-```
-
-To view the coverage report, you must install the report generator:
-
-```bash
-dotnet tool install -g dotnet-reportgenerator-globaltool
-```
-
-And then you can generate the report:
-
-```bash
-# use the guid returned in TestResults path. The html coverage report will be generated under the coveragereport directory.
-reportgenerator "-reports:TestResults\{guid}\coverage.cobertura.xml" "-targetdir:coveragereport" -reporttypes:Html
-```

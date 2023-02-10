@@ -1,9 +1,10 @@
 using System.Diagnostics.CodeAnalysis;
+using AasFactory.Azure.Functions.Functions;
 using Azure.Messaging.EventHubs;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 
-namespace AasFactory.Azure.Functions.Functions;
+namespace AasFactory.Azure.Functions.ModelDataFlow.Functions;
 
 [ExcludeFromCodeCoverage]
 public class FactoryModelDataChangedFunction : BasicFunctionWithReturn<EventData>

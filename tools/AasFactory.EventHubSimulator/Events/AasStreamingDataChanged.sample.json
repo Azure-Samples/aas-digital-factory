@@ -5,19 +5,19 @@
             "SourceTimestampFieldName": "starttime",
             "Properties": [
                 {
-                    "Id": "aas_sme_m_grill1_cy_starttime",
+                    "Id": "aas_sme_m_grill1_op_starttime",
                     "IdShort": "starttime",
                     "ValueType": 3,
                     "Value": "2022-11-09 11:11:11"
                 },
                 {
-                    "Id": "aas_sme_m_grill1_cy_endtime",
+                    "Id": "aas_sme_m_grill1_op_endtime",
                     "IdShort": "endtime",
                     "ValueType": 3,
                     "Value": "2022-11-09 11:11:11"
                 },
                 {
-                    "Id": "aas_sme_m_grill1_cy_temperature",
+                    "Id": "aas_sme_m_grill1_op_temperature",
                     "IdShort": "temperature",
                     "ValueType": 4,
                     "Value": "20.22"

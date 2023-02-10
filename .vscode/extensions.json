@@ -6,8 +6,6 @@
     "ms-azuretools.vscode-azureresourcegroups",
     "ms-azuretools.vscode-azureterraform",
     "azurite.azurite",
-    "hashicorp.terraform",
-    "fernandoescolar.vscode-solution-explorer",
-    "davidanson.vscode-markdownlint"
+    "hashicorp.terraform"
   ]
 }

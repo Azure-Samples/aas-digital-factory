@@ -4,7 +4,7 @@ using Azure.Messaging.EventHubs;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 
-namespace AasFactory.Azure.Functions.StreamingDataFlow;
+namespace AasFactory.Azure.Functions.StreamingDataFlow.Functions;
 
 [ExcludeFromCodeCoverage]
 public class AasStreamingDataChangedFunction : BasicFunctionAsync
