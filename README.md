@@ -169,9 +169,6 @@ More on the overall architecture can be found [here](./docs/architecture.md).
      - Run the program with `dotnet run`. This will trigger the streaming data flow azure functions from the `Deploying Azure Resources` step.
      - You should now see values for the properties of the machine instance on the graph.
 
-**NOTE:** There are 3 storage accounts provisioned with this solution. The storage account connection string that should be used is the storage account that is in a format of `{prefix}dev{location}sa`.
-Please note, there are two other storage accounts. These storage accounts will end in `tdsa` or `mdsa`.
-
 ## More Links
 
 - The project uses [central package management feature](https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management).
