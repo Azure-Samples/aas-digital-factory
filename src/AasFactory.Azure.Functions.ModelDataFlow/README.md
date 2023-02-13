@@ -60,7 +60,7 @@ The function will read the file from storage and write the data to ADT (Azure Di
 
 #### AAS Data Changed Payload
 
-The json file in blob storage is expected to conform to the definition of the message from [this design doc](../../docs/model-data-raw-to-aas.md).
+The json file in blob storage is expected to conform to the definition of the message from [this design doc](../../docs/design/model-data-raw-to-aas.md).
 
 ## Configure
 
