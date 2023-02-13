@@ -75,19 +75,19 @@ It also patches the `$metadata.sourceTime` on the fields.
 {
     "Properties":
         {
-            "Id": "sm_sme_m_machine1_op_starttime",
+            "Id": "aas_sme_m_machine1_op_starttime",
             "IdShort": "StartTime",
             "ValueType": 3,
             "Value": "2023-02-02T18:00:00.000Z"
         },
         {
-            "Id": "sm_sme_m_machine1_op_endtime",
+            "Id": "aas_sme_m_machine1_op_endtime",
             "IdShort": "EndTime",
             "ValueType": 3,
             "Value": "2023-02-02T18:00:00.000Z"
         },
         {
-            "Id": "sm_sme_m_machine1_op_temperature",
+            "Id": "aas_sme_m_machine1_op_temperature",
             "IdShort": "temperature",
             "ValueType": 7,
             "Value": "12.34"
