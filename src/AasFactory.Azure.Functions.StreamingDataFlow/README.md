@@ -4,12 +4,103 @@ This project includes the Azure Functions that will be part of Streaming Data Fl
 
 ## Sections <!-- omit in toc -->
 
+- [Streaming Data](#streaming-data)
+  - [Factory Streaming Data Changed Function](#factory-streaming-data-changed-function)
+    - [Factory Streaming Data Changed Event](#factory-streaming-data-changed-event)
+  - [AAS Streaming Data Changed Function](#aas-streaming-data-changed-function)
+    - [AAS Model Data Changed Event](#aas-model-data-changed-event)
 - [Configure](#configure)
 - [Error Handling](#error-handling)
 - [Permissions](#permissions)
 - [Run the Azure Functions locally](#run-the-azure-functions-locally)
   - [Prerequisites](#prerequisites)
   - [Steps](#steps)
+
+## Streaming Data
+
+### Factory Streaming Data Changed Function
+
+This function acts on an Event Hub message containing a set of telemetry updates to be applied.
+This function converts the payload to AAS format and sends it as an Event Hub message to trigger the AAS Streaming Data Changed Function.
+
+#### Factory Streaming Data Changed Event
+
+```json
+{
+  "header": {
+    "machineId": "grill1",
+    "modelType": "machineType"
+  },
+  "data": [
+    {
+        "id": "starttime",
+        "name": "starttime",
+        "dataType": "datetime",
+        "value": "2023-02-02T18:00:00.000Z"
+    },
+    {
+        "id": "endtime",
+        "name": "endtime",
+        "dataType": "datetime",
+        "value": "2023-02-02T18:00:00.000Z"
+    },
+    {
+        "id": "temperature",
+        "name": "temperature",
+        "dataType": "float64",
+        "value": 12.34
+    }
+  ]
+}
+```
+
+- **header.machineId**: The Id of the machine.
+- **header.modelType**: The model type.
+- **data[*].id**: The id of the streaming data.
+- **data[*].name**: The name of the streaming data.
+- **data[*].dataType**: The data type of the streaming data.
+- **data[*].value**: The new value of the streaming data.
+
+### AAS Streaming Data Changed Function
+
+This function acts on an Event Hub message containing a set of AAS-transformed property update events.
+It validates and processes these events by making the relevant updates to ADT (Azure Digital Twins) using the ADT SDK:
+for each property twin in ADT, this function patches the fields `value` (and for non-string property values, `{type}Value`,
+where `{type}` is the [property type](../AasFactory.Azure.Models/Aas/Metamodels/Enums/PropertyType.cs)).
+It also patches the `$metadata.sourceTime` on the fields.
+
+#### AAS Model Data Changed Event
+
+```json
+{
+    "Properties":
+        {
+            "Id": "aas_sme_m_machine1_op_starttime",
+            "IdShort": "StartTime",
+            "ValueType": 3,
+            "Value": "2023-02-02T18:00:00.000Z"
+        },
+        {
+            "Id": "aas_sme_m_machine1_op_endtime",
+            "IdShort": "EndTime",
+            "ValueType": 3,
+            "Value": "2023-02-02T18:00:00.000Z"
+        },
+        {
+            "Id": "aas_sme_m_machine1_op_temperature",
+            "IdShort": "temperature",
+            "ValueType": 7,
+            "Value": "12.34"
+        },
+        ...
+        ]
+}
+```
+
+- **Properties[*].Id**: `$dtId` of the associated twin in ADT.
+- **Properties[*].dShort**: internal identifier for the property name.
+- **Properties[*].ValueType**: type of the property, maps to the [`PropertyType` enum](../AAsFactory.Azure.Models/Aas/Metamodels/Enums/PropertyType.cs)
+- **Properties[*].Value**: value of the property
 
 ## Configure
 
@@ -30,9 +121,6 @@ The following configuration parameters may be defined...
 
 - **CIRCUIT_BREAKER_WAIT_TIME_SEC** [DEFAULT: 60]: The duration of the circuit break (in seconds) after the number of max allowed exceptions is reached.
 
-- **COUNTER_CACHE_EXPIRY_IN_SECONDS** [DEFAULT: 30]: The counter cache expiry in seconds.
-  This value represents how long the cache will be locked after a cache hit.
-
 - **EVENT_HUB_CONNECTION_STRING** [REQUIRED]: The connection string of the Event Hub namespace used.
 Note that when running without managed identity,
 the full connection string in the format `"Endpoint=sb://<your-event-hub-namespace>.servicebus.windows.net/;SharedAccessKeyName=...;SharedAccessKey=..."`
@@ -43,7 +131,13 @@ in the format of just the hostname, `<your-event-hub-namespace>.servicebus.windo
 In this case, the managed identity trying to connect to the Event Hub would also need Reader and Sender permissions for it.
 For more information, see the [Authenticate the Client section of the Event Hubs extension package page](https://www.nuget.org/packages/Microsoft.Azure.WebJobs.Extensions.EventHubs/5.0.0-beta.7#readme-body-tab).
 
+- **FACTORY_EVENT_HUB_NAME** [REQUIRED]: The Event Hub where the Factory streaming update events will be sent.
+
 - **FUNCTIONS_WORKER_RUNTIME** [REQUIRED]: This should be set to "dotnet".
+
+- **SIMMY_DEPENDENCY_FAULT_TOLERANCE** [OPTIONAL]: The service that is subject to manufactured failures (either `Adt` or `Storage`).
+
+- **SIMMY_INJECTION_RATE** [OPTIONAL]: The percent of requests that will fail (values range from 0 to 100) based on the service selected from the **SIMMY_DEPENDENCY_FAULT_TOLERANCE** variable.
 
 ## Error Handling
 
