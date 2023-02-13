@@ -35,7 +35,7 @@ The function will then write the file to blob and send a message to trigger the 
 }
 ```
 
-- **Path**: The path to the file in blob storage. Path should not include the container name in the prefix.
+- **Path**: The path to the file in blob storage. The path should not include the container name in the prefix.
 - **OutputFileName**: The name of the blob (without the file extension) that is saved to the shell storage path.
 
 #### Factory Model Data Changed Payload
