@@ -267,8 +267,14 @@ variable "model_data_storage_account_retention_days" {
   default     = 90
 }
 
-variable "aas_metamodels_path" {
+variable "adt_models_link" {
   type        = string
-  description = "The path to the AAS metamodels."
-  default     = "../adt-aas-models"
+  description = "Link to download ADT metamodel JSON files."
+  default     = "https://github.com/digitaltwinconsortium/ManufacturingOntologies/archive/refs/tags/v1.0.tar.gz"
+}
+
+variable "adt_models_directory" {
+  type        = string
+  description = "Directory inside adt models zip that contains the model JSON files."
+  default     = "ManufacturingOntologies-1.0/Ontologies/AssetAdminShell"
 }

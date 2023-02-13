@@ -32,7 +32,8 @@ module "azure_adt_pipeline" {
 
   # ADT variables
   adt_name            = "${local.resource_name_prefix_dashes}-adt"
-  aas_metamodels_path = var.aas_metamodels_path
+  adt_models_link      = var.adt_models_link
+  adt_models_directory = var.adt_models_directory
 
   # ADX variables
   adx_cluster_name                = "${local.resource_name_prefix_no_dashes}adx"
