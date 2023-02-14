@@ -17,7 +17,6 @@ usage () {
 while getopts c:l:p: flag
 do
     case "${flag}" in
-        b) terraform_backend_config_file=${OPTARG};;
         c) abbreviated_company_name=${OPTARG};;
         l) location=${OPTARG};;
         p) prefix=${OPTARG};;
