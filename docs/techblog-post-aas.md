@@ -10,7 +10,7 @@ The Industries 4.0 AAS ontology is an open standard for the exchange of informat
 It was specifically created to aid solution providers in speeding up the development of digital twin solutions for manufacturing applications, such as predictive maintenance, asset condition monitoring, OEE calculation, and simulation.
 The authors of this [GitHub repository](https://github.com/digitaltwinconsortium/ManufacturingOntologies/tree/main/Ontologies/AssetAdminShell) have trialed the applicability of using AAS as a base for building an ontology for Smart Production (Discrete Manufacturing, Process Manufacturing and Automotive Production).
 
-**Why AAS ontology to represent Digital Twins?**
+### Why should we use the AAS ontology to represent Digital Twins?
 
 1. Being a standard, it offers a shared foundation for modeling factories using industry-standard techniques, which reduces the need for reinvention.
 1. Flexibility in modeling a manufacturing facility using pre-defined [DTDL models](https://learn.microsoft.com/en-us/azure/digital-twins/concepts-models#digital-twin-definition-language-dtdl-for-models). Traditionally what would become a DTDL model add/change followed by an update of the twin because of schema changes is now a simple twin update as the model is fixed.
