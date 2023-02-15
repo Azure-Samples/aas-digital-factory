@@ -19,7 +19,7 @@ The authors of this [GitHub repository](https://github.com/digitaltwinconsortium
 Imagine a real-life scenario of `Contoso`, a delivery company that uses robots to pick products from a warehouse and prepare them for shipping.
 The company has two facilities located in Seattle and Boston, each with a line of two robots that are of the same type and share common parts.
 
-To keep track of the performance of the robots, they collect a vast amount of telemetry data, including operational data and key performance indicators, and send this information to the cloud. 
+To keep track of the performance of the robots, they collect a vast amount of telemetry data, including operational data and key performance indicators, and send this information to the cloud.
 John, who works at Contoso, uses a dashboard to monitor the data and take action if there are any issues, such as downtime, to ensure timely delivery to customers.
 
 Creating this connected system requires representing `Contoso's` current structure, including its two facilities, one line, two machines, and components, in a graph.
@@ -33,13 +33,11 @@ Additionally, the user should have access to historical data to identify pattern
 
 ### Architecture
 
-Overall implementation of the solution is a serverless based architecture responsible for building the digital representation of a manufacturing factory in digital twins and updating the machines telemetry data near real-time for analysis; corresponding to the model transformation and streaming data flows respectively.
+Overall implementation of the solution is a serverless architecture responsible for building the digital representation of a manufacturing factory in digital twins and updating the machines' telemetry data near real-time for analysis; corresponding to the model transformation and streaming data flows respectively.
 
-Both of these flows will be initiated through events in **Azure Event Hub**. Once initiated, each flow executes two sequential **Azure Functions**, one for AAS conversion and another for ADT conversion; which we'll cover later in this post.
+Both of these flows will be initiated through events in **Azure Event Hub**. Once initiated, each flow executes two sequential **Azure Functions**, one for AAS conversion and another for ADT conversion; which we'll cover later in this post. The model transformation functions depends on **Azure Blob Storage** as part of their workflows. **Azure Data Explorer** (ADX) is part of the solution of the streaming data flow to record the updates to the twins.
 
-The model transformation functions depends on **Azure Blob Storage** as part of their workflows, whereas both flows relies heavily on **Azure Digital Twins** during ADT conversion. **Azure Data Explorer** (ADX) is also part of the solution during streaming data flow.
-
-A detailed architectural diagram that illustrates the individual components can be found [in the sample project documentation](./architecture.md)
+A detailed explanation of the architecture and the reasoning behind the choice of resources used can be found [in the sample project documentation](./architecture.md)
 
 ### Factory Inputs
 
@@ -74,8 +72,8 @@ As part of the model transformation flow, here is an example factory as per `Con
 
 There are few things to call out here:
 
-- Attributes that describe this factory object. For example, `id` represents the unique identifier, `name` represents the code name, `displayName` represents the friendly name and `placeName` represents the location.
-- Attributes that defines relationships to other factory objects. For example, the machine object with id `robot1` has a relationship to the factory object `contoso`.
+- Attributes that describe the factory object. For example, `id` represents the unique identifier, `name` represents the code name, `displayName` represents the friendly name and `placeName` represents the location.
+- Attributes that define relationships to other factory objects. For example, the machine object with id `robot1` has a relationship to the factory object `contoso`.
 
 A full `Contoso` data model representation, which includes lines, machines, machine types and concept description, can be found in the [model data from the sample project](../samples/model-data/Factory.json).
 
@@ -167,19 +165,21 @@ Here is an example AAS machine as per `Contoso` data model represented as JSON:
 },
 ```
 
-For every new custom onboarding the mapping rules implementation may change based on the definition of the incoming data but the underlying standard models definitions to which they will be transformed to will not have to change. It is also worth noting that POCO (Plain Old CLR Objects) classes have been defined for the AAS models definition.
+For every new data model onboarding, the mapping rules implementation may change based on the definition of the incoming data but the underlying standard models definitions to which they will be transformed to will not have to change. It is also worth noting that POCO (Plain Old CLR Objects) classes have been defined for the AAS models definition.
 
 Once we have tranformed the input data to a standard format, the data is ready to be represented in Azure digital twin. For digital representation, let's look at how ADT conversion works next.
 
 ### ADT Conversion
 
-The AAS format data is converted to DTDL specific format to be able to create azure digital twins and relationships. We have defined POCO classes here as well for the twins and relationships definitions in our implementation. You will notice that we have used Azure SDK for Azure digital twin interactions. Let's look at one of the sample code [snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ConceptDescriptionRepository.cs) that is used to first convert Concept Description to twins and relationships definitions and then create them. `Twins.ConceptDescription` and `Twins.DataSpecification` are the POCO classes defined for creating digital twins. `ConceptDescriptionToDataSpecification` and `ReferenceToConceptDescription` are the POCO classes defined for creating digital relationships.
+The AAS format data is converted to DTDL specific format to be able to create azure digital twins and relationships. We have defined POCO classes here as well for the twins and relationships definitions in our implementation. You will notice that we have used Azure SDK for Azure digital twin interactions. Let's look at a [code snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ConceptDescriptionRepository.cs) that is used to first convert Concept Description to twins and relationships definitions and then create them.
+
+`Twins.ConceptDescription` and `Twins.DataSpecification` are POCO classes defined for creating digital twins. `ConceptDescriptionToDataSpecification` and  `ReferenceToConceptDescription` are POCO classes defined for creating digital relationships.
 
 [Here](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/ConceptDescription.cs) is one of the ADT `Twins.ConceptDescription` POCO class definition for reference.
 
 ### Model and Streaming Flows
 
-Based on the understanding we have so far on the AAS conversion and ADT conversion, let's now look at how all the information ties down to both the flows.
+Based on the understanding we have so far on the AAS conversion and ADT conversion, let's now look at how all the information ties to both the flows.
 
 The purpose of `Model transformation flow` is to:
 
