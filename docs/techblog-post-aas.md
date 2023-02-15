@@ -1,5 +1,7 @@
 # Building Digital Twins using Industrie 4.0 AAS ontology
 
+## Introduction
+
 Digital Twins are virtual models of real-world entities, including places, business processes, and people, that can be created and managed using [Azure Digital Twins (ADT)](https://learn.microsoft.com/en-us/azure/digital-twins/).
 Possibilities are immense when these models include real-time data with historization capabilities.
 This post will walk you through a serverless solution that can be used to create digital twins for manufacturing data models, utilizing the [Asset Administration Shell (AAS) ontology](https://github.com/digitaltwinconsortium/ManufacturingOntologies/tree/main/Ontologies/AssetAdminShell).
@@ -14,7 +16,7 @@ The authors of this [GitHub repository](https://github.com/digitaltwinconsortium
 1. Flexibility in modeling a manufacturing facility using pre-defined DTDL models. Traditionally what would become a DTDL model add/change followed by an update of the twin because of schema changes is now a simple twin update as the model is fixed.
 1. A powerful key concept of the AAS metamodel is that all relevant information is provided by submodels. Submodels can refer to other submodels. This enables a high degree of independence from the entire supply chain in building and operating digital twins.
 
-## Sample Scenario
+### Sample Scenario
 
 Imagine a real-life scenario of `Contoso`, a delivery company that uses robots to pick products from a warehouse and prepare them for shipping.
 The company has two facilities located in Seattle and Boston, each with a line of two robots that are of the same type and share common parts.
@@ -31,7 +33,7 @@ Firstly, the system will parse the representation of the factory graph and const
 Secondly, as operational data or key performance indicators are received, the digital twins will be updated accordingly.
 Additionally, the user should have access to historical data to identify patterns.
 
-### Architecture
+## Architecture
 
 Overall implementation of the solution is a serverless architecture responsible for building the digital representation of a manufacturing factory in digital twins and updating the machines' telemetry data near real-time for analysis; corresponding to the model transformation and streaming data flows respectively.
 
@@ -180,7 +182,7 @@ Once we have tranformed the input data to a standard format, the data is ready t
    </div>
 </div>
 
-The AAS format data is converted to DTDL specific format to be able to create azure digital twins and relationships. We have defined POCO classes here as well for the twins and relationships definitions in our implementation. You will notice that we have used Azure SDK for Azure digital twin interactions. Let's look at one of the sample code [snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ConceptDescriptionRepository.cs) that is used to first convert Concept Description to twins and relationships definitions and then create them. `Twins.ConceptDescription` and `Twins.DataSpecification` are the POCO classes defined for creating digital twins. `ConceptDescriptionToDataSpecification` and `ReferenceToConceptDescription` are the POCO classes defined for creating digital relationships.
+The AAS format data is converted to DTDL specific format to be able to create azure digital twins and relationships. We have defined POCO classes here as well for the twins and relationships definitions in our implementation. You will notice that we have used Azure SDK for Azure digital twin interactions. Let's look at a [code snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ConceptDescriptionRepository.cs) that is used to first convert Concept Description to twins and relationships definitions and then create them. `Twins.ConceptDescription` and `Twins.DataSpecification` are the POCO classes defined for creating digital twins. `ConceptDescriptionToDataSpecification` and `ReferenceToConceptDescription` are the POCO classes defined for creating digital relationships.
 
 [Here](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/ConceptDescription.cs) is one of the ADT `Twins.ConceptDescription` POCO class definition for reference.
 
