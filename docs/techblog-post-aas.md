@@ -182,9 +182,17 @@ Once we have tranformed the input data to a standard format, the data is ready t
    </div>
 </div>
 
-The AAS format data is converted to DTDL specific format to be able to create azure digital twins and relationships. We have defined POCO classes here as well for the twins and relationships definitions in our implementation. You will notice that we have used Azure SDK for Azure digital twin interactions. Let's look at a [code snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ConceptDescriptionRepository.cs) that is used to first convert Concept Description to twins and relationships definitions and then create them. `Twins.ConceptDescription` and `Twins.DataSpecification` are the POCO classes defined for creating digital twins. `ConceptDescriptionToDataSpecification` and `ReferenceToConceptDescription` are the POCO classes defined for creating digital relationships.
+The AAS factory data is converted to DTDL specific format to be able to create digital twins and relationships on ADT. These DTDLs are pre-defined in the [Asset Administration Shell (AAS) ontology](https://github.com/digitaltwinconsortium/ManufacturingOntologies/tree/main/Ontologies/AssetAdminShell).
 
-[Here](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/ConceptDescription.cs) is one of the ADT `Twins.ConceptDescription` POCO class definition for reference.
+Based on the ADT representation above, you can observe by colors that:
+
+- violet nodes are DTDL AAS. This corresponds to the shell header of each AAS factory data; such as factory, line, machine and machine type.
+- aqua nodes are DTDL Submodels. A DTDL AAS can contain multiple submodels. For example, the AAS Factory (Seattle's Factory) has three submodels to access information about the Nameplate, Machines and Lines.
+- sky blue, yellow and red nodes are Properties (representing different data types). A DTDL Property describe a property value. Useful for storing telemetry data. For example, the Submodel OperationalData reports temperature data.
+
+To accomplish this result, we encourage using the Azure SDK for Azure Digital Twins interactions. We suggest start creating POCO classes here as well for the AAS twins and relationships definitions in the implementation. As an example, here is of the [ADT Submodel Twin POCO class definition](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/Submodel.cs#L12).
+
+Now that the POCO classes for AAS twins and relationships are defined, you need to implement the logic to map the AAS represention into the ADT representation. For that, you need to traverse all your AAS factory data from top (Shell) to bottom (Properties). For example, create first the twin for DTDL AAS, then create twins the DTDL submodels that are connected, and finally create the relationships between these DTDL AAS and Submodels. This [code snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ShellRepository.cs#L27-L47) describes what we just talked about.
 
 ## Summary
 
