@@ -56,8 +56,8 @@ As part of the model transformation flow, here is an example factory as per `Con
       "timezone": "PST",
       "machines": [
         {
-          "id": "grill1",
-          "name": "grill1"
+          "id": "robot1",
+          "name": "robot1"
         },
         ...
       ],
@@ -75,7 +75,7 @@ As part of the model transformation flow, here is an example factory as per `Con
 There are few things to call out here:
 
 - Attributes that describe this factory object. For example, `id` represents the unique identifier, `name` represents the code name, `displayName` represents the friendly name and `placeName` represents the location.
-- Attributes that defines relationships to other factory objects. For example, the machine object with id `grill1` has a relationship to the factory object `contoso`.
+- Attributes that defines relationships to other factory objects. For example, the machine object with id `robot1` has a relationship to the factory object `contoso`.
 
 A full `Contoso` data model representation, which includes lines, machines, machine types and concept description, can be found in the [model data from the sample project](../samples/model-data/Factory.json).
 
@@ -86,7 +86,7 @@ Here is an example machine update as per `Contoso` data model represented as JSO
 ```json
         {
           "header": {
-            "machineId": "grill1",
+            "machineId": "robot1",
             "modelType": "machineType"
           },
           "data": [
@@ -112,7 +112,7 @@ Here is an example machine update as per `Contoso` data model represented as JSO
         }
 ```
 
-We can observe the machine with id `grill1` sent one update for `temperature` property. The other properties `starttime` and `endtime` are required properties for historization purposes. Keep in mind that a machine update can include more than one property update.
+We can observe the machine with id `robot1` sent one update for `temperature` property. The other properties `starttime` and `endtime` are required properties for historization purposes. Keep in mind that a machine update can include more than one property update.
 
 Now let's try to understand the two processing flows in detail. Both the flows have one thing in common, both of them try to convert the factory provided data into common AAS format data and then move the data to Azure digital twin.
 
@@ -129,16 +129,16 @@ Here is an example AAS machine as per `Contoso` data model represented as JSON:
 
 ```json
 {
-   "Id":"aas_m_grill1",
-   "IdShort":"grill1",
+   "Id":"aas_m_robot1",
+   "IdShort":"robot1",
    "DisplayName":{
       "LangString":{
-         "EN":"Grill 1"
+         "EN":"Robot 1"
       }
    },
    "SubModels":[
       {
-         "Id":"aas_sm_m_grill1_od",
+         "Id":"aas_sm_m_robot1_od",
          "IdShort":5,
          "DisplayName":{
             "LangString":{
@@ -152,7 +152,7 @@ Here is an example AAS machine as per `Contoso` data model represented as JSON:
                      "EN":"Temperature"
                   }
                },
-               "Id":"aas_sme_m_grill1_od_temperature",
+               "Id":"aas_sme_m_robot1_od_temperature",
                "IdShort":"temperature",
                "ValueType":4,
                "Value":"",
