@@ -173,6 +173,15 @@ Once we have tranformed the input data to a standard format, the data is ready t
 
 ### ADT Conversion
 
+<div style="margin: auto; text-align: center; margin-top: 20px; margin-bottom: 20px;">
+   <div>
+      <img src="./assets/seattle-factory-adt-graph.png" style="max-height: 800px;" />
+   </div>
+   <div>
+      <i>The ADT representation of the Seattle Factory (1 line, 2 machines, 1 machine type).</i>
+   </div>
+</div>
+
 The AAS format data is converted to DTDL specific format to be able to create azure digital twins and relationships. We have defined POCO classes here as well for the twins and relationships definitions in our implementation. You will notice that we have used Azure SDK for Azure digital twin interactions. Let's look at one of the sample code [snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ConceptDescriptionRepository.cs) that is used to first convert Concept Description to twins and relationships definitions and then create them. `Twins.ConceptDescription` and `Twins.DataSpecification` are the POCO classes defined for creating digital twins. `ConceptDescriptionToDataSpecification` and `ReferenceToConceptDescription` are the POCO classes defined for creating digital relationships.
 
 [Here](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/ConceptDescription.cs) is one of the ADT `Twins.ConceptDescription` POCO class definition for reference.
