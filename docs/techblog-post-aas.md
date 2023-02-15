@@ -12,7 +12,7 @@ The authors of this [GitHub repository](https://github.com/digitaltwinconsortium
 
 1. Being a standard, it offers a shared foundation for modeling factories using industry-standard techniques, which reduces the need for reinvention.
 1. Flexibility in modeling a manufacturing facility using pre-defined DTDL models. Traditionally what would become a DTDL model add/change followed by an update of the twin because of schema changes is now a simple twin update as the model is fixed.
-1. A powerful key concept of the AAS metamodel is that all relevant information is provided by submodels. Submodels can refer to other submodels.This enables a high degree of independence from the entire supply chain in building and operating digital twins.
+1. A powerful key concept of the AAS metamodel is that all relevant information is provided by submodels. Submodels can refer to other submodels. This enables a high degree of independence from the entire supply chain in building and operating digital twins.
 
 ## Sample Scenario
 
