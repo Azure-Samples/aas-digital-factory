@@ -1,30 +1,26 @@
 {
 	"factory": [
 		{
-			"id": "contoso",
+			"id": "seattle",
 			"modelType": "factory",
-			"name": "contoso",
-			"displayName": "Contoso",
+			"name": "Seattle Factory",
+			"displayName": "Seattle Factory",
 			"placeName": "Washington, USA",
 			"timezone": "PST",
 			"machines": [
 				{
-					"id": "grill1",
-					"name": "grill1"
+					"id": "robot1",
+					"name": "Robot 1"
 				},
 				{
-					"id": "oven1",
-					"name": "oven1"
-				},
-				{
-					"id": "dishWasher1",
-					"name": "dishWasher1"
+					"id": "robot2",
+					"name": "Robot 2"
 				}
 			],
 			"lines": [
 				{
 					"id": "line1",
-					"name": "line1"
+					"name": "Line 1"
 				}
 			]
 		}
@@ -33,46 +29,30 @@
 		{
 			"id": "line1",
 			"modelType": "line",
-			"name": "line1",
+			"name": "Line 1",
 			"displayName": "Line 1",
 			"factory": {
-				"id": "contoso",
-				"name": "contoso"
+				"id": "seattle",
+				"name": "Seattle Factory"
 			},
 			"topology": [
 				{
-					"id": "grill1",
-					"name": "grill1",
+					"id": "robot1",
+					"name": "Robot 1",
 					"successors": [
 						{
-							"id": "oven1",
-							"name": "oven1"
+							"id": "robot2",
+							"name": "Robot 2"
 						}
 					]
 				},
 				{
-					"id": "oven1",
-					"name": "oven1",
-					"successors": [
-						{
-							"id": "dishWasher1",
-							"name": "dishwasher1"
-						}
-					],
+					"id": "robot2",
+					"name": "Robot 2",
 					"predecessors": [
 						{
-							"id": "grill1",
-							"name": "grill1"
-						}
-					]
-				},
-				{
-					"id": "dishWasher1",
-					"name": "dishWasher1",
-					"predecessors": [
-						{
-							"id": "oven1",
-							"name": "oven1"
+							"id": "robot1",
+							"name": "Robot 1"
 						}
 					]
 				}
@@ -81,66 +61,10 @@
 	],
 	"machineType": [
         {
-			"id": "grill",
+			"id": "robot",
 			"modelType": "machineType",
-			"name": "grill",
-			"displayName": "Grill",
-			"fields": [
-                {
-                    "id": "temperature",
-                    "name": "temperature",
-                    "displayName": "Temperature",
-                    "dataType": "float64",
-                    "statType": "continuous",
-                    "unit": "°C"
-                },
-                {
-                    "id": "starttime",
-                    "name": "starttime",
-                    "displayName": "Start Time",
-                    "dataType": "datetime"
-                },
-                {
-                    "id": "endtime",
-                    "name": "endtime",
-                    "displayName": "End Time",
-                    "dataType": "datetime"
-                }
-            ]
-		},
-		{
-			"id": "oven",
-			"modelType": "machineType",
-			"name": "oven",
-			"displayName": "Oven",
-			"fields": [
-                {
-                    "id": "temperature",
-                    "name": "temperature",
-                    "displayName": "Temperature",
-                    "dataType": "float64",
-                    "statType": "continuous",
-                    "unit": "°C"
-                },
-                {
-                    "id": "starttime",
-                    "name": "starttime",
-                    "displayName": "Start Time",
-                    "dataType": "datetime"
-                },
-                {
-                    "id": "endtime",
-                    "name": "endtime",
-                    "displayName": "End Time",
-                    "dataType": "datetime"
-                }
-            ]
-		},
-        {
-			"id": "dishWasher",
-			"modelType": "machineType",
-			"name": "dishWasher",
-			"displayName": "Dish Washer",
+			"name": "Robot",
+			"displayName": "Robot",
 			"fields": [
                 {
                     "id": "temperature",
@@ -167,62 +91,42 @@
 	],
 	"machine": [
 		{
-			"id": "grill1",
+			"id": "robot1",
 			"modelType": "machine",
-			"name": "grill1",
-			"displayName": "Grill 1",
+			"name": "Robot 1",
+			"displayName": "Robot 1",
 			"machineType": {
-				"id": "grill",
-				"name": "grill"
+				"id": "robot",
+				"name": "Robot"
 			},
 			"factory": {
-				"id": "contoso",
-				"name": "contoso"
+				"id": "seattle",
+				"name": "Seattle Factory"
 			},
 			"lines": [
 				{
 					"id": "line1",
-					"name": "line1"
+					"name": "Line 1"
 				}
 			]
 		},
 		{
-			"id": "oven1",
+			"id": "robot2",
 			"modelType": "machine",
-			"name": "oven1",
-			"displayName": "Oven 1",
+			"name": "Robot 2",
+			"displayName": "Robot 2",
 			"machineType": {
-				"id": "oven",
-				"name": "oven"
+				"id": "robot",
+				"name": "Robot"
 			},
 			"factory": {
-				"id": "contoso",
-				"name": "contoso"
+				"id": "seattle",
+				"name": "Seattle Factory"
 			},
 			"lines": [
 				{
 					"id": "line1",
-					"name": "line1"
-				}
-			]
-		},
-        {
-			"id": "dishWasher1",
-			"modelType": "machine",
-			"name": "dishWasher1",
-			"displayName": "Dish Washer 1",
-			"machineType": {
-				"id": "dishWasher",
-				"name": "dishWasher"
-			},
-			"factory": {
-				"id": "contoso",
-				"name": "contoso"
-			},
-			"lines": [
-				{
-					"id": "line1",
-					"name": "line1"
+					"name": "Line 1"
 				}
 			]
 		}

@@ -121,7 +121,7 @@ Let's first review how the AAS conversion is implemented.
 For AAS conversion, we use a list of mapping rules to translate the factory data to data based on Asset Administration Shell (AAS) metamodel.
 This step is really important as it helps with converting custom factory data to predefined standard AAS models.
 
-Let's try to understand by using sample code of the custom machine model and see how it is converted into standard AAS components: Submodels and Reference Elements. First, we will have to look at one of the mapping rule defined to transform custom models to standard AAS models. Let's uses this sample code [file](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/AasConverters/MachineConverter.cs) as reference. This piece of code does the necessary conversion to standard models.
+Let's try to understand by using sample code of the custom machine model and see how it is converted into standard AAS components: Submodels and Reference Elements. First, we will have to look at one of the mapping rule defined to transform custom models to standard AAS models. Let's use this sample code [file](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/AasConverters/MachineConverter.cs) as reference. This piece of code does the necessary conversion to standard models.
 
 Here is an example AAS machine as per `Contoso` data model represented as JSON:
 
@@ -171,9 +171,16 @@ Once we have tranformed the input data to a standard format, the data is ready t
 
 ### ADT Conversion
 
-The AAS format data is converted to DTDL specific format to be able to create azure digital twins and relationships. We have defined POCO classes here as well for the twins and relationships definitions in our implementation. You will notice that we have used Azure SDK for Azure digital twin interactions. Let's look at a [code snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ConceptDescriptionRepository.cs) that is used to first convert Concept Description to twins and relationships definitions and then create them.
+<div style="margin: auto; text-align: center; margin-top: 20px; margin-bottom: 20px;">
+   <div>
+      <img src="./assets/seattle-factory-adt-graph.png" style="max-height: 800px;" />
+   </div>
+   <div>
+      <i>The ADT representation of the Seattle Factory (1 line, 2 machines, 1 machine type).</i>
+   </div>
+</div>
 
-`Twins.ConceptDescription` and `Twins.DataSpecification` are POCO classes defined for creating digital twins. `ConceptDescriptionToDataSpecification` and  `ReferenceToConceptDescription` are POCO classes defined for creating digital relationships.
+The AAS format data is converted to DTDL specific format to be able to create azure digital twins and relationships. We have defined POCO classes here as well for the twins and relationships definitions in our implementation. You will notice that we have used Azure SDK for Azure digital twin interactions. Let's look at one of the sample code [snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ConceptDescriptionRepository.cs) that is used to first convert Concept Description to twins and relationships definitions and then create them. `Twins.ConceptDescription` and `Twins.DataSpecification` are the POCO classes defined for creating digital twins. `ConceptDescriptionToDataSpecification` and `ReferenceToConceptDescription` are the POCO classes defined for creating digital relationships.
 
 [Here](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/ConceptDescription.cs) is one of the ADT `Twins.ConceptDescription` POCO class definition for reference.
 
