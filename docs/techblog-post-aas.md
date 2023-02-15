@@ -182,8 +182,8 @@ The AAS factory data is converted to DTDL specific format to be able to create d
 Based on the ADT representation above, you can observe by colors that:
 
 - Purple nodes are DTDL AAS shells such as factory, line, machine and machine type.
-- Aqua nodes are DTDL Submodels. A DTDL AAS can contain multiple submodels. For example, the AAS Factory (Seattle's Factory) has three submodels to access information about the Nameplate, Machines and Lines.
-- Blue, yellow and red nodes are properties (representing different data types). For example, the Submodel OperationalData (of each Robot) reports temperature data.
+- Aqua nodes are DTDL Submodels. A DTDL AAS may contain many submodels. For example, the AAS Factory (Seattle's Factory) has three submodels to access information about the Nameplate, Machines and Lines.
+- Blue, yellow and red nodes are DTDL Properties (representing different data types). For example, the Submodel OperationalData (of each Robot) reports temperature data.
 
 To accomplish this result, we encourage using the Azure SDK for Azure Digital Twins interactions. We suggest start creating POCO classes here as well for the AAS twins and relationships definitions in the implementation. As an example, here is of the [ADT Submodel Twin POCO class definition](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/Submodel.cs#L12).
 
