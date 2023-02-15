@@ -35,7 +35,9 @@ Additionally, our end users, John and his colleagues, should have access to hist
 
 ## Architecture
 
-Overall implementation of the solution is a serverless architecture responsible for building the digital representation of a manufacturing factory in digital twins and updating the machines' telemetry data near real-time for analysis; corresponding to the model transformation and streaming data flows respectively.
+This solution is implemented using a serverless architecture.
+It is responsible for (1) building the digital representation of a manufacturing factory in digital twins and (2) updating the machines' telemetry data near real-time for analysis; 
+these functionalities correspond to the model transformation and streaming data flows, respectively.
 
 Both of these flows will be initiated through events in **Azure Event Hub**. Once initiated, each flow executes two sequential **Azure Functions**, one for AAS conversion and another for ADT conversion; which we'll cover later in this post. The model transformation functions depends on **Azure Blob Storage** as part of their workflows. **Azure Data Explorer** (ADX) is part of the solution of the streaming data flow to record the updates to the twins.
 
