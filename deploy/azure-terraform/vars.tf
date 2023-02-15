@@ -66,35 +66,6 @@ variable "log_analytics_workspace_retention_in_days" {
   default     = 30
 }
 
-variable "alert_action_group_email_address" {
-  type        = string
-  description = "The email address to receive notifications when Azure Monitor alerts are triggered."
-}
-
-variable "mdf_alert_severity" {
-  type        = number
-  description = "The severity of the Model Data Flow exception alert."
-  default     = 1
-}
-
-variable "mdf_alert_exception_threshold" {
-  type        = number
-  description = "The number of exceptions that the Model Data function can encounter in a 5 minute period before an alert is triggered."
-  default     = 1
-}
-
-variable "tdf_alert_severity" {
-  type        = number
-  description = "The severity of the Streaming Data Flow exception alert."
-  default     = 2
-}
-
-variable "tdf_alert_exception_threshold" {
-  type        = number
-  description = "The number of exceptions that the Streaming Data function can encounter in a 5 minute period before an alert is triggered."
-  default     = 20
-}
-
 # EventHubs variables
 variable "eventhub_namespace_sku" {
   type        = string

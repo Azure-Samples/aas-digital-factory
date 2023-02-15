@@ -24,11 +24,6 @@ module "azure_adt_pipeline" {
   app_insights_name                         = "${local.resource_name_prefix_dashes}-ai"
   log_analytics_workspace_name              = "${local.resource_name_prefix_dashes}-la"
   log_analytics_workspace_retention_in_days = var.log_analytics_workspace_retention_in_days
-  alert_action_group_email_address          = var.alert_action_group_email_address
-  mdf_alert_severity                        = var.mdf_alert_severity
-  mdf_alert_exception_threshold             = var.mdf_alert_exception_threshold
-  tdf_alert_severity                        = var.tdf_alert_severity
-  tdf_alert_exception_threshold             = var.tdf_alert_exception_threshold
 
   # ADT variables
   adt_name            = "${local.resource_name_prefix_dashes}-adt"

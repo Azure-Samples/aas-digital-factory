@@ -30,31 +30,6 @@ variable "log_analytics_workspace_retention_in_days" {
   description = "The retention policy for the log analytics workspace."
 }
 
-variable "alert_action_group_email_address" {
-  type        = string
-  description = "The email address to receive notifications when Azure Monitor alerts are triggered."
-}
-
-variable "mdf_alert_severity" {
-  type        = number
-  description = "The severity of the Model Data Flow exception alert."
-}
-
-variable "mdf_alert_exception_threshold" {
-  type        = number
-  description = "The number of exceptions that the Model Data function can encounter in a 5 minute period before an alert is triggered."
-}
-
-variable "tdf_alert_severity" {
-  type        = number
-  description = "The severity of the Streaming Data Flow exception alert."
-}
-
-variable "tdf_alert_exception_threshold" {
-  type        = number
-  description = "The number of exceptions that the Streaming Data function can encounter in a 5 minute period before an alert is triggered."
-}
-
 # Azure Data Explorer variables
 variable "adx_cluster_name" {
   type        = string
