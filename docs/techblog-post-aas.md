@@ -194,7 +194,7 @@ Below diagram represents how the implementation is done in detail and the detail
 The purpose of `Streaming data flow` is to:
 
 1. Ingest the new telemetry sample from the factory
-1. Convert the telemetry sample into a pseudo AAS object to
+1. Convert the telemetry sample into a pseudo-AAS object to
 1. Update the necessary machine properties of the corresponding twin on the graph.
 
 Below diagram represents how the implementation is done in detail and the details of the function can be found [here](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.StreamingDataFlow/README.md).
