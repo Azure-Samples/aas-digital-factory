@@ -26,14 +26,7 @@ John, who works at Contoso, uses a dashboard to monitor the data and take action
 
 Creating this connected system requires representing `Contoso's` current structure, including its two facilities, one line, two machines, and components, in a graph.
 
-<div style="margin: auto; text-align: center; margin-top: 20px; margin-bottom: 20px;">
-   <div>
-      <img src="./assets/data-model-diagram.png" style="max-height: 450px;" />
-   </div>
-   <div>
-      <i>Contoso's ontology.</i>
-   </div>
-</div>
+![Contoso's ontology](./assets/data-model-diagram.png)
 
 Our goal is to represent `Contoso's` current structure as digital twins. The process involves two main flows: model transformation and streaming data.
 Firstly, the system will parse the representation of the factory graph and construct the digital twins.
@@ -180,22 +173,17 @@ Once we have tranformed the input data to a standard format, the data is ready t
 
 ### ADT Conversion
 
-<div style="margin: auto; text-align: center; margin-top: 20px; margin-bottom: 20px;">
-   <div>
-      <img src="./assets/seattle-factory-adt-graph.png" style="max-height: 800px;" />
-   </div>
-   <div>
-      <i>The ADT representation of the Seattle Factory (1 line, 2 machines, 1 machine type).</i>
-   </div>
-</div>
+Below is the ADT representation of the Seattle Factory (1 line, 2 machines, 1 machine type).
+
+![The ADT representation of the Seattle Factory (1 line, 2 machines, 1 machine type).](./assets/seattle-factory-adt-graph.png)
 
 The AAS factory data is converted to DTDL specific format to be able to create digital twins and relationships on ADT. These DTDLs are pre-defined in the [Asset Administration Shell (AAS) ontology](https://github.com/digitaltwinconsortium/ManufacturingOntologies/tree/main/Ontologies/AssetAdminShell).
 
 Based on the ADT representation above, you can observe by colors that:
 
-- violet nodes are DTDL AAS. This corresponds to the shell header of each AAS factory data; such as factory, line, machine and machine type.
-- aqua nodes are DTDL Submodels. A DTDL AAS can contain multiple submodels. For example, the AAS Factory (Seattle's Factory) has three submodels to access information about the Nameplate, Machines and Lines.
-- sky blue, yellow and red nodes are Properties (representing different data types). A DTDL Property describe a property value. Useful for storing telemetry data. For example, the Submodel OperationalData (of each Robot) reports temperature data.
+- Purple nodes are DTDL AAS shells such as factory, line, machine and machine type.
+- Aqua nodes are DTDL Submodels. A DTDL AAS can contain multiple submodels. For example, the AAS Factory (Seattle's Factory) has three submodels to access information about the Nameplate, Machines and Lines.
+- Blue, yellow and red nodes are properties (representing different data types). For example, the Submodel OperationalData (of each Robot) reports temperature data.
 
 To accomplish this result, we encourage using the Azure SDK for Azure Digital Twins interactions. We suggest start creating POCO classes here as well for the AAS twins and relationships definitions in the implementation. As an example, here is of the [ADT Submodel Twin POCO class definition](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/Submodel.cs#L12).
 
