@@ -24,7 +24,7 @@ John, who works at Contoso, uses a dashboard to monitor the data and take action
 
 Creating this connected system requires representing `Contoso's` current structure, including its two facilities, one line, two machines, and components, in a graph.
 
-![Data Model Diagram](./data-model-diagram-small.png)
+![Data Model Diagram](./assets/data-model-diagram-small.png)
 
 Our goal is to represent `Contoso's` current structure as digital twins. The process involves two main flows: model transformation and streaming data.
 Firstly, the system will parse the representation of the factory graph and construct the digital twins.
