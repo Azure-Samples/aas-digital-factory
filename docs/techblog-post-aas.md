@@ -190,7 +190,7 @@ Now that the POCO classes for AAS twins and relationships are defined, you need 
 
 ## Summary
 
-AAS is a standard developed by the Industrial Internet Consortium (IIC) for describing the assets in an industrial system. Azure Digital Twins is a platform that allows you to model, analyze, and monitor digital representations of physical environments, such as buildings, factories, and cities.
+AAS is a standard developed by the Industrial Internet Consortium (IIC) for describing the assets in an industrial system. Azure Digital Twins (ADT) is a platform that allows you to model, analyze, and monitor digital representations of physical environments, such as buildings, factories, and cities.
 
 We can use the AAS standard as a metamodel in ADT to model the assets within ADT; such as machines, equipment, and devices. By doing so, you can provide a standardized way of describing the assets, which can help to simplify integration with other systems without dealing with defining models.
 
