@@ -196,4 +196,13 @@ Now that the POCO classes for AAS twins and relationships are defined, you need 
 
 ## Summary
 
-The [github sample](https://github.com/Azure-Samples/aas-digital-factory) provides the code and deployment script for the described architecture. Although converting to AAS adds complexity, it provides an abstraction from the factory model updates.
+AAS is a standard developed by the Industrial Internet Consortium (IIC) for describing the assets in an industrial system. Azure Digital Twins is a platform that allows you to model, analyze, and monitor digital representations of physical environments, such as buildings, factories, and cities.
+
+We can use the AAS standard as a meta model in ADT to model the assets within ADT, such as machines, equipment, and devices. By doing so, you can provide a standardized way of describing the assets, which can help to simplify integration with other systems without dealing with defining models.
+
+We can use the AAS meta model to create a digital twin model of an asset that includes its physical characteristics, such as its location, dimensions, and components, as well as its functional characteristics, such as its capabilities and operational parameters. We can utilize AAS to monitor the performance of assets within the digital twin environment, such as measuring their energy consumption, temperature, and other key indicators that can be represented by AAS standard submodels. We may also use AAS standard to represent schedule and track maintenance activities for assets within ADT, such as conducting inspections, replacing parts, and performing repairs. Overall, using AAS in Azure Digital Twins can help us to create a more comprehensive and interoperable digital twin environment that can support a wide range of industrial applications.
+
+In the proposed architecture, we can encapsulate the complexity of converting a factory data model to AAS
+by adding a logical layer on top of ADT to handle the AAS request and encapsulate the complexity of AAS from top layer.  
+
+The [github sample](https://github.com/Azure-Samples/aas-digital-factory) provides the code and deployment script for the described architecture.
