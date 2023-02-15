@@ -1,2947 +1,1486 @@
 {
-    "Factories":[
-       {
-          "Id":"aas_f_contoso",
-          "Iri":"https://aasfactory.com/aas/cnts/aas/instance/aas_f_contoso",
-          "IdShort":"contoso",
-          "DerivedFrom":"",
-          "ReferenceElementIds":[
-             
-          ],
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"Contoso"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Category":"",
-          "Checksum":"",
-          "SubModels":[
-             {
-                "Id":"aas_sm_f_contoso_np",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/instance/aas_sm_f_contoso_np",
-                "IdShort":4,
-                "Kind":{
-                   "kind":2
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"Nameplate"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"PlaceName"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_f_contoso_np_placename",
-                      "IdShort":"PlaceName",
-                      "ValueType":9,
-                      "Value":"Washington, USA"
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"TimeZone"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_f_contoso_np_timezone",
-                      "IdShort":"TimeZone",
-                      "ValueType":9,
-                      "Value":"PST"
-                   }
-                ],
-                "ReferenceElements":[
-                   
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   
-                ]
-             },
-             {
-                "Id":"aas_sm_f_contoso_m",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/instance/aas_sm_f_contoso_m",
-                "IdShort":3,
-                "Kind":{
-                   "kind":2
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"Machines"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   
-                ],
-                "ReferenceElements":[
-                   {
-                      "Id":"aas_re_m_grill1",
-                      "IdShort":"grill1Ref",
-                      "SemanticIdValue":"",
-                      "Key1":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key2":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key3":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key4":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key5":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key6":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key7":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key8":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"grill1Ref"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":""
-                   },
-                   {
-                      "Id":"aas_re_m_oven1",
-                      "IdShort":"oven1Ref",
-                      "SemanticIdValue":"",
-                      "Key1":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key2":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key3":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key4":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key5":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key6":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key7":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key8":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"oven1Ref"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":""
-                   },
-                   {
-                      "Id":"aas_re_m_dishWasher1",
-                      "IdShort":"dishWasher1Ref",
-                      "SemanticIdValue":"",
-                      "Key1":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key2":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key3":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key4":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key5":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key6":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key7":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key8":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"dishWasher1Ref"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":""
-                   }
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   
-                ]
-             },
-             {
-                "Id":"aas_sm_f_contoso_l",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/instance/aas_sm_f_contoso_l",
-                "IdShort":2,
-                "Kind":{
-                   "kind":2
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"Lines"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   
-                ],
-                "ReferenceElements":[
-                   {
-                      "Id":"aas_re_l_line1",
-                      "IdShort":"line1Ref",
-                      "SemanticIdValue":"",
-                      "Key1":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key2":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key3":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key4":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key5":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key6":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key7":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key8":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"line1Ref"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":""
-                   }
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   
-                ]
-             }
-          ],
-          "AssetInformation":{
-             "AssetKind":{
-                "assetKind":2
-             },
-             "DefaultThumbnailPath":"",
-             "GlobalAssetIdValue":"",
-             "SpecificAssetIdValue":""
-          }
-       }
-    ],
-    "Machines":[
-       {
-          "Id":"aas_m_grill1",
-          "Iri":"https://aasfactory.com/aas/cnts/aas/instance/aas_m_grill1",
-          "IdShort":"grill1",
-          "DerivedFrom":"aas_mt_grill",
-          "ReferenceElementIds":[
-             "aas_re_m_grill1"
-          ],
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"Grill 1"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Category":"",
-          "Checksum":"",
-          "SubModels":[
-             {
-                "Id":"aas_sm_m_grill1_od",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/instance/aas_sm_m_grill1_od",
-                "IdShort":5,
-                "Kind":{
-                   "kind":2
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"OperationalData"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Temperature"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_m_grill1_od_temperature",
-                      "IdShort":"temperature",
-                      "ValueType":4,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Start Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_m_grill1_od_starttime",
-                      "IdShort":"starttime",
-                      "ValueType":3,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"End Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_m_grill1_od_endtime",
-                      "IdShort":"endtime",
-                      "ValueType":3,
-                      "Value":""
-                   }
-                ],
-                "ReferenceElements":[
-                   
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   
-                ]
-             }
-          ],
-          "AssetInformation":{
-             "AssetKind":{
-                "assetKind":2
-             },
-             "DefaultThumbnailPath":"",
-             "GlobalAssetIdValue":"",
-             "SpecificAssetIdValue":""
-          }
-       },
-       {
-          "Id":"aas_m_oven1",
-          "Iri":"https://aasfactory.com/aas/cnts/aas/instance/aas_m_oven1",
-          "IdShort":"oven1",
-          "DerivedFrom":"aas_mt_oven",
-          "ReferenceElementIds":[
-             "aas_re_m_oven1"
-          ],
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"Oven 1"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Category":"",
-          "Checksum":"",
-          "SubModels":[
-             {
-                "Id":"aas_sm_m_oven1_od",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/instance/aas_sm_m_oven1_od",
-                "IdShort":5,
-                "Kind":{
-                   "kind":2
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"OperationalData"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Temperature"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_m_oven1_od_temperature",
-                      "IdShort":"temperature",
-                      "ValueType":4,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Start Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_m_oven1_od_starttime",
-                      "IdShort":"starttime",
-                      "ValueType":3,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"End Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_m_oven1_od_endtime",
-                      "IdShort":"endtime",
-                      "ValueType":3,
-                      "Value":""
-                   }
-                ],
-                "ReferenceElements":[
-                   
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   
-                ]
-             }
-          ],
-          "AssetInformation":{
-             "AssetKind":{
-                "assetKind":2
-             },
-             "DefaultThumbnailPath":"",
-             "GlobalAssetIdValue":"",
-             "SpecificAssetIdValue":""
-          }
-       },
-       {
-          "Id":"aas_m_dishWasher1",
-          "Iri":"https://aasfactory.com/aas/cnts/aas/instance/aas_m_dishwasher1",
-          "IdShort":"dishWasher1",
-          "DerivedFrom":"aas_mt_dishWasher",
-          "ReferenceElementIds":[
-             "aas_re_m_dishWasher1"
-          ],
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"Dish Washer 1"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Category":"",
-          "Checksum":"",
-          "SubModels":[
-             {
-                "Id":"aas_sm_m_dishWasher1_od",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/instance/aas_sm_m_dishwasher1_od",
-                "IdShort":5,
-                "Kind":{
-                   "kind":2
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"OperationalData"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Temperature"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_m_dishWasher1_od_temperature",
-                      "IdShort":"temperature",
-                      "ValueType":4,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Start Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_m_dishWasher1_od_starttime",
-                      "IdShort":"starttime",
-                      "ValueType":3,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"End Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_m_dishWasher1_od_endtime",
-                      "IdShort":"endtime",
-                      "ValueType":3,
-                      "Value":""
-                   }
-                ],
-                "ReferenceElements":[
-                   
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   
-                ]
-             }
-          ],
-          "AssetInformation":{
-             "AssetKind":{
-                "assetKind":2
-             },
-             "DefaultThumbnailPath":"",
-             "GlobalAssetIdValue":"",
-             "SpecificAssetIdValue":""
-          }
-       }
-    ],
-    "Lines":[
-       {
-          "Id":"aas_l_line1",
-          "Iri":"https://aasfactory.com/aas/cnts/aas/instance/aas_l_line1",
-          "IdShort":"line1",
-          "DerivedFrom":"",
-          "ReferenceElementIds":[
-             "aas_re_l_line1"
-          ],
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"Line 1"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Category":"",
-          "Checksum":"",
-          "SubModels":[
-             {
-                "Id":"aas_sm_l_line1_m",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/instance/aas_sm_l_line1_m",
-                "IdShort":3,
-                "Kind":{
-                   "kind":2
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"Machines"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   
-                ],
-                "ReferenceElements":[
-                   {
-                      "Id":"aas_re_m_grill1",
-                      "IdShort":"grill1Ref",
-                      "SemanticIdValue":"",
-                      "Key1":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key2":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key3":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key4":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key5":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key6":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key7":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key8":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"grill1Ref"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":""
-                   },
-                   {
-                      "Id":"aas_re_m_oven1",
-                      "IdShort":"oven1Ref",
-                      "SemanticIdValue":"",
-                      "Key1":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key2":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key3":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key4":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key5":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key6":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key7":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key8":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"oven1Ref"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":""
-                   },
-                   {
-                      "Id":"aas_re_m_dishWasher1",
-                      "IdShort":"dishWasher1Ref",
-                      "SemanticIdValue":"",
-                      "Key1":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key2":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key3":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key4":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key5":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key6":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key7":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Key8":{
-                         "Type":0,
-                         "Value":""
-                      },
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"dishWasher1Ref"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Category":"",
-                      "Checksum":""
-                   }
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   
-                ]
-             },
-             {
-                "Id":"aas_sm_l_line1_pf",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/instance/aas_sm_l_line1_pf",
-                "IdShort":6,
-                "Kind":{
-                   "kind":2
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"ProcessFlow"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   
-                ],
-                "ReferenceElements":[
-                   
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   {
-                      "Id":"aas_smec_l_line1_pf",
-                      "IdShort":"Machines",
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "Kind":{
-                         "kind":2
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Machines"
-                         }
-                      },
-                      "SubModelElementCollections":[
-                         {
-                            "Id":"aas_smec_l_line1_pf_grill1",
-                            "IdShort":"grill1",
-                            "Category":"",
-                            "Checksum":"",
-                            "SemanticIdValue":"",
-                            "Kind":{
-                               "kind":2
-                            },
-                            "Tags":{
-                               "Markers":{
-                                  
-                               },
-                               "Values":{
-                                  
-                               }
-                            },
-                            "Description":{
-                               "LangString":{
-                                  
-                               }
-                            },
-                            "DisplayName":{
-                               "LangString":{
-                                  "EN":"grill1"
-                               }
-                            },
-                            "SubModelElementCollections":[
-                               
-                            ],
-                            "ReferenceElements":[
-                               {
-                                  "Id":"aas_re_m_grill1",
-                                  "IdShort":"grill1Ref",
-                                  "SemanticIdValue":"",
-                                  "Key1":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key2":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key3":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key4":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key5":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key6":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key7":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key8":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Description":{
-                                     "LangString":{
-                                        
-                                     }
-                                  },
-                                  "DisplayName":{
-                                     "LangString":{
-                                        "EN":"grill1Ref"
-                                     }
-                                  },
-                                  "Tags":{
-                                     "Markers":{
-                                        
-                                     },
-                                     "Values":{
-                                        
-                                     }
-                                  },
-                                  "Kind":{
-                                     "kind":2
-                                  },
-                                  "Category":"",
-                                  "Checksum":""
-                               }
-                            ],
-                            "SubModelElementLists":[
-                               {
-                                  "Id":"aas_smel_l_line1_pf_grill1_s",
-                                  "IdShort":"Successors",
-                                  "Kind":{
-                                     "kind":2
-                                  },
-                                  "Description":{
-                                     "LangString":{
-                                        
-                                     }
-                                  },
-                                  "DisplayName":{
-                                     "LangString":{
-                                        "EN":"Successors"
-                                     }
-                                  },
-                                  "Tags":{
-                                     "Markers":{
-                                        
-                                     },
-                                     "Values":{
-                                        
-                                     }
-                                  },
-                                  "Category":"",
-                                  "Checksum":"",
-                                  "OrderRelevant":false,
-                                  "SemanticIdValue":"",
-                                  "SemanticIdValueOfListElements":"",
-                                  "TypeValueListElement":13,
-                                  "ValueTypeOfElement":0,
-                                  "ReferenceElements":[
-                                     {
-                                        "Id":"aas_re_m_oven1",
-                                        "IdShort":"oven1Ref",
-                                        "SemanticIdValue":"",
-                                        "Key1":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key2":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key3":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key4":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key5":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key6":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key7":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key8":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Description":{
-                                           "LangString":{
-                                              
-                                           }
-                                        },
-                                        "DisplayName":{
-                                           "LangString":{
-                                              "EN":"oven1Ref"
-                                           }
-                                        },
-                                        "Tags":{
-                                           "Markers":{
-                                              
-                                           },
-                                           "Values":{
-                                              
-                                           }
-                                        },
-                                        "Kind":{
-                                           "kind":2
-                                        },
-                                        "Category":"",
-                                        "Checksum":""
-                                     }
-                                  ],
-                                  "Properties":[
-                                     
-                                  ]
-                               },
-                               {
-                                  "Id":"aas_smel_l_line1_pf_grill1_p",
-                                  "IdShort":"Predecessors",
-                                  "Kind":{
-                                     "kind":2
-                                  },
-                                  "Description":{
-                                     "LangString":{
-                                        
-                                     }
-                                  },
-                                  "DisplayName":{
-                                     "LangString":{
-                                        "EN":"Predecessors"
-                                     }
-                                  },
-                                  "Tags":{
-                                     "Markers":{
-                                        
-                                     },
-                                     "Values":{
-                                        
-                                     }
-                                  },
-                                  "Category":"",
-                                  "Checksum":"",
-                                  "OrderRelevant":false,
-                                  "SemanticIdValue":"",
-                                  "SemanticIdValueOfListElements":"",
-                                  "TypeValueListElement":13,
-                                  "ValueTypeOfElement":0,
-                                  "ReferenceElements":[
-                                     
-                                  ],
-                                  "Properties":[
-                                     
-                                  ]
-                               }
-                            ]
-                         },
-                         {
-                            "Id":"aas_smec_l_line1_pf_oven1",
-                            "IdShort":"oven1",
-                            "Category":"",
-                            "Checksum":"",
-                            "SemanticIdValue":"",
-                            "Kind":{
-                               "kind":2
-                            },
-                            "Tags":{
-                               "Markers":{
-                                  
-                               },
-                               "Values":{
-                                  
-                               }
-                            },
-                            "Description":{
-                               "LangString":{
-                                  
-                               }
-                            },
-                            "DisplayName":{
-                               "LangString":{
-                                  "EN":"oven1"
-                               }
-                            },
-                            "SubModelElementCollections":[
-                               
-                            ],
-                            "ReferenceElements":[
-                               {
-                                  "Id":"aas_re_m_oven1",
-                                  "IdShort":"oven1Ref",
-                                  "SemanticIdValue":"",
-                                  "Key1":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key2":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key3":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key4":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key5":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key6":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key7":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key8":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Description":{
-                                     "LangString":{
-                                        
-                                     }
-                                  },
-                                  "DisplayName":{
-                                     "LangString":{
-                                        "EN":"oven1Ref"
-                                     }
-                                  },
-                                  "Tags":{
-                                     "Markers":{
-                                        
-                                     },
-                                     "Values":{
-                                        
-                                     }
-                                  },
-                                  "Kind":{
-                                     "kind":2
-                                  },
-                                  "Category":"",
-                                  "Checksum":""
-                               }
-                            ],
-                            "SubModelElementLists":[
-                               {
-                                  "Id":"aas_smel_l_line1_pf_oven1_s",
-                                  "IdShort":"Successors",
-                                  "Kind":{
-                                     "kind":2
-                                  },
-                                  "Description":{
-                                     "LangString":{
-                                        
-                                     }
-                                  },
-                                  "DisplayName":{
-                                     "LangString":{
-                                        "EN":"Successors"
-                                     }
-                                  },
-                                  "Tags":{
-                                     "Markers":{
-                                        
-                                     },
-                                     "Values":{
-                                        
-                                     }
-                                  },
-                                  "Category":"",
-                                  "Checksum":"",
-                                  "OrderRelevant":false,
-                                  "SemanticIdValue":"",
-                                  "SemanticIdValueOfListElements":"",
-                                  "TypeValueListElement":13,
-                                  "ValueTypeOfElement":0,
-                                  "ReferenceElements":[
-                                     {
-                                        "Id":"aas_re_m_dishWasher1",
-                                        "IdShort":"dishwasher1Ref",
-                                        "SemanticIdValue":"",
-                                        "Key1":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key2":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key3":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key4":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key5":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key6":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key7":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key8":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Description":{
-                                           "LangString":{
-                                              
-                                           }
-                                        },
-                                        "DisplayName":{
-                                           "LangString":{
-                                              "EN":"dishwasher1Ref"
-                                           }
-                                        },
-                                        "Tags":{
-                                           "Markers":{
-                                              
-                                           },
-                                           "Values":{
-                                              
-                                           }
-                                        },
-                                        "Kind":{
-                                           "kind":2
-                                        },
-                                        "Category":"",
-                                        "Checksum":""
-                                     }
-                                  ],
-                                  "Properties":[
-                                     
-                                  ]
-                               },
-                               {
-                                  "Id":"aas_smel_l_line1_pf_oven1_p",
-                                  "IdShort":"Predecessors",
-                                  "Kind":{
-                                     "kind":2
-                                  },
-                                  "Description":{
-                                     "LangString":{
-                                        
-                                     }
-                                  },
-                                  "DisplayName":{
-                                     "LangString":{
-                                        "EN":"Predecessors"
-                                     }
-                                  },
-                                  "Tags":{
-                                     "Markers":{
-                                        
-                                     },
-                                     "Values":{
-                                        
-                                     }
-                                  },
-                                  "Category":"",
-                                  "Checksum":"",
-                                  "OrderRelevant":false,
-                                  "SemanticIdValue":"",
-                                  "SemanticIdValueOfListElements":"",
-                                  "TypeValueListElement":13,
-                                  "ValueTypeOfElement":0,
-                                  "ReferenceElements":[
-                                     {
-                                        "Id":"aas_re_m_grill1",
-                                        "IdShort":"grill1Ref",
-                                        "SemanticIdValue":"",
-                                        "Key1":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key2":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key3":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key4":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key5":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key6":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key7":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key8":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Description":{
-                                           "LangString":{
-                                              
-                                           }
-                                        },
-                                        "DisplayName":{
-                                           "LangString":{
-                                              "EN":"grill1Ref"
-                                           }
-                                        },
-                                        "Tags":{
-                                           "Markers":{
-                                              
-                                           },
-                                           "Values":{
-                                              
-                                           }
-                                        },
-                                        "Kind":{
-                                           "kind":2
-                                        },
-                                        "Category":"",
-                                        "Checksum":""
-                                     }
-                                  ],
-                                  "Properties":[
-                                     
-                                  ]
-                               }
-                            ]
-                         },
-                         {
-                            "Id":"aas_smec_l_line1_pf_dishWasher1",
-                            "IdShort":"dishWasher1",
-                            "Category":"",
-                            "Checksum":"",
-                            "SemanticIdValue":"",
-                            "Kind":{
-                               "kind":2
-                            },
-                            "Tags":{
-                               "Markers":{
-                                  
-                               },
-                               "Values":{
-                                  
-                               }
-                            },
-                            "Description":{
-                               "LangString":{
-                                  
-                               }
-                            },
-                            "DisplayName":{
-                               "LangString":{
-                                  "EN":"dishWasher1"
-                               }
-                            },
-                            "SubModelElementCollections":[
-                               
-                            ],
-                            "ReferenceElements":[
-                               {
-                                  "Id":"aas_re_m_dishWasher1",
-                                  "IdShort":"dishWasher1Ref",
-                                  "SemanticIdValue":"",
-                                  "Key1":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key2":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key3":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key4":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key5":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key6":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key7":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Key8":{
-                                     "Type":0,
-                                     "Value":""
-                                  },
-                                  "Description":{
-                                     "LangString":{
-                                        
-                                     }
-                                  },
-                                  "DisplayName":{
-                                     "LangString":{
-                                        "EN":"dishWasher1Ref"
-                                     }
-                                  },
-                                  "Tags":{
-                                     "Markers":{
-                                        
-                                     },
-                                     "Values":{
-                                        
-                                     }
-                                  },
-                                  "Kind":{
-                                     "kind":2
-                                  },
-                                  "Category":"",
-                                  "Checksum":""
-                               }
-                            ],
-                            "SubModelElementLists":[
-                               {
-                                  "Id":"aas_smel_l_line1_pf_dishWasher1_s",
-                                  "IdShort":"Successors",
-                                  "Kind":{
-                                     "kind":2
-                                  },
-                                  "Description":{
-                                     "LangString":{
-                                        
-                                     }
-                                  },
-                                  "DisplayName":{
-                                     "LangString":{
-                                        "EN":"Successors"
-                                     }
-                                  },
-                                  "Tags":{
-                                     "Markers":{
-                                        
-                                     },
-                                     "Values":{
-                                        
-                                     }
-                                  },
-                                  "Category":"",
-                                  "Checksum":"",
-                                  "OrderRelevant":false,
-                                  "SemanticIdValue":"",
-                                  "SemanticIdValueOfListElements":"",
-                                  "TypeValueListElement":13,
-                                  "ValueTypeOfElement":0,
-                                  "ReferenceElements":[
-                                     
-                                  ],
-                                  "Properties":[
-                                     
-                                  ]
-                               },
-                               {
-                                  "Id":"aas_smel_l_line1_pf_dishWasher1_p",
-                                  "IdShort":"Predecessors",
-                                  "Kind":{
-                                     "kind":2
-                                  },
-                                  "Description":{
-                                     "LangString":{
-                                        
-                                     }
-                                  },
-                                  "DisplayName":{
-                                     "LangString":{
-                                        "EN":"Predecessors"
-                                     }
-                                  },
-                                  "Tags":{
-                                     "Markers":{
-                                        
-                                     },
-                                     "Values":{
-                                        
-                                     }
-                                  },
-                                  "Category":"",
-                                  "Checksum":"",
-                                  "OrderRelevant":false,
-                                  "SemanticIdValue":"",
-                                  "SemanticIdValueOfListElements":"",
-                                  "TypeValueListElement":13,
-                                  "ValueTypeOfElement":0,
-                                  "ReferenceElements":[
-                                     {
-                                        "Id":"aas_re_m_oven1",
-                                        "IdShort":"oven1Ref",
-                                        "SemanticIdValue":"",
-                                        "Key1":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key2":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key3":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key4":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key5":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key6":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key7":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Key8":{
-                                           "Type":0,
-                                           "Value":""
-                                        },
-                                        "Description":{
-                                           "LangString":{
-                                              
-                                           }
-                                        },
-                                        "DisplayName":{
-                                           "LangString":{
-                                              "EN":"oven1Ref"
-                                           }
-                                        },
-                                        "Tags":{
-                                           "Markers":{
-                                              
-                                           },
-                                           "Values":{
-                                              
-                                           }
-                                        },
-                                        "Kind":{
-                                           "kind":2
-                                        },
-                                        "Category":"",
-                                        "Checksum":""
-                                     }
-                                  ],
-                                  "Properties":[
-                                     
-                                  ]
-                               }
-                            ]
-                         }
-                      ],
-                      "ReferenceElements":[
-                         
-                      ],
-                      "SubModelElementLists":[
-                         
-                      ]
-                   }
-                ]
-             }
-          ],
-          "AssetInformation":{
-             "AssetKind":{
-                "assetKind":2
-             },
-             "DefaultThumbnailPath":"",
-             "GlobalAssetIdValue":"",
-             "SpecificAssetIdValue":""
-          }
-       }
-    ],
-    "MachineTypes":[
-       {
-          "Id":"aas_mt_grill",
-          "Iri":"https://aasfactory.com/aas/cnts/aas/type/aas_mt_grill",
-          "IdShort":"grill",
-          "DerivedFrom":"",
-          "ReferenceElementIds":[
-             
-          ],
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"Grill"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Category":"",
-          "Checksum":"",
-          "SubModels":[
-             {
-                "Id":"aas_sm_mt_grill_od",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/type/aas_sm_mt_grill_od",
-                "IdShort":5,
-                "Kind":{
-                   "kind":1
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"OperationalData"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Temperature"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":1
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"aas_cd_mt_grill_od_temperature",
-                      "SemanticIdReference":{
-                         "Id":"aas_r_aas_cd_mt_grill_od_temperature",
-                         "Key1":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key2":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key3":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key4":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key5":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key6":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key7":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key8":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Type":2
-                      },
-                      "Id":"aas_sme_mt_grill_od_temperature",
-                      "IdShort":"temperature",
-                      "ValueType":4,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Start Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":1
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_mt_grill_od_starttime",
-                      "IdShort":"starttime",
-                      "ValueType":3,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"End Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":1
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_mt_grill_od_endtime",
-                      "IdShort":"endtime",
-                      "ValueType":3,
-                      "Value":""
-                   }
-                ],
-                "ReferenceElements":[
-                   
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   
-                ]
-             }
-          ],
-          "AssetInformation":{
-             "AssetKind":{
-                "assetKind":1
-             },
-             "DefaultThumbnailPath":"",
-             "GlobalAssetIdValue":"",
-             "SpecificAssetIdValue":""
-          }
-       },
-       {
-          "Id":"aas_mt_oven",
-          "Iri":"https://aasfactory.com/aas/cnts/aas/type/aas_mt_oven",
-          "IdShort":"oven",
-          "DerivedFrom":"",
-          "ReferenceElementIds":[
-             
-          ],
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"Oven"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Category":"",
-          "Checksum":"",
-          "SubModels":[
-             {
-                "Id":"aas_sm_mt_oven_od",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/type/aas_sm_mt_oven_od",
-                "IdShort":5,
-                "Kind":{
-                   "kind":1
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"OperationalData"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Temperature"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":1
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"aas_cd_mt_oven_od_temperature",
-                      "SemanticIdReference":{
-                         "Id":"aas_r_aas_cd_mt_oven_od_temperature",
-                         "Key1":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key2":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key3":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key4":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key5":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key6":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key7":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key8":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Type":2
-                      },
-                      "Id":"aas_sme_mt_oven_od_temperature",
-                      "IdShort":"temperature",
-                      "ValueType":4,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Start Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":1
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_mt_oven_od_starttime",
-                      "IdShort":"starttime",
-                      "ValueType":3,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"End Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":1
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_mt_oven_od_endtime",
-                      "IdShort":"endtime",
-                      "ValueType":3,
-                      "Value":""
-                   }
-                ],
-                "ReferenceElements":[
-                   
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   
-                ]
-             }
-          ],
-          "AssetInformation":{
-             "AssetKind":{
-                "assetKind":1
-             },
-             "DefaultThumbnailPath":"",
-             "GlobalAssetIdValue":"",
-             "SpecificAssetIdValue":""
-          }
-       },
-       {
-          "Id":"aas_mt_dishWasher",
-          "Iri":"https://aasfactory.com/aas/cnts/aas/type/aas_mt_dishwasher",
-          "IdShort":"dishWasher",
-          "DerivedFrom":"",
-          "ReferenceElementIds":[
-             
-          ],
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"Dish Washer"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Category":"",
-          "Checksum":"",
-          "SubModels":[
-             {
-                "Id":"aas_sm_mt_dishWasher_od",
-                "Iri":"https://aasfactory.com/aas/cnts/sm/type/aas_sm_mt_dishwasher_od",
-                "IdShort":5,
-                "Kind":{
-                   "kind":1
-                },
-                "Description":{
-                   "LangString":{
-                      
-                   }
-                },
-                "DisplayName":{
-                   "LangString":{
-                      "EN":"OperationalData"
-                   }
-                },
-                "Tags":{
-                   "Markers":{
-                      
-                   },
-                   "Values":{
-                      
-                   }
-                },
-                "Administration":{
-                   "Version":"1",
-                   "Revision":"1"
-                },
-                "Category":"",
-                "Checksum":"",
-                "SemanticIdValue":"",
-                "Properties":[
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Temperature"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":1
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"aas_cd_mt_dishWasher_od_temperature",
-                      "SemanticIdReference":{
-                         "Id":"aas_r_aas_cd_mt_dishWasher_od_temperature",
-                         "Key1":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key2":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key3":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key4":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key5":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key6":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key7":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Key8":{
-                            "Type":0,
-                            "Value":""
-                         },
-                         "Type":2
-                      },
-                      "Id":"aas_sme_mt_dishWasher_od_temperature",
-                      "IdShort":"temperature",
-                      "ValueType":4,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"Start Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":1
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_mt_dishWasher_od_starttime",
-                      "IdShort":"starttime",
-                      "ValueType":3,
-                      "Value":""
-                   },
-                   {
-                      "Description":{
-                         "LangString":{
-                            
-                         }
-                      },
-                      "DisplayName":{
-                         "LangString":{
-                            "EN":"End Time"
-                         }
-                      },
-                      "Tags":{
-                         "Markers":{
-                            
-                         },
-                         "Values":{
-                            
-                         }
-                      },
-                      "Kind":{
-                         "kind":1
-                      },
-                      "Category":"",
-                      "Checksum":"",
-                      "SemanticIdValue":"",
-                      "SemanticIdReference":null,
-                      "Id":"aas_sme_mt_dishWasher_od_endtime",
-                      "IdShort":"endtime",
-                      "ValueType":3,
-                      "Value":""
-                   }
-                ],
-                "ReferenceElements":[
-                   
-                ],
-                "SubModelElementLists":[
-                   
-                ],
-                "SubModelElementCollections":[
-                   
-                ]
-             }
-          ],
-          "AssetInformation":{
-             "AssetKind":{
-                "assetKind":1
-             },
-             "DefaultThumbnailPath":"",
-             "GlobalAssetIdValue":"",
-             "SpecificAssetIdValue":""
-          }
-       }
-    ],
-    "ConceptDescriptions":[
-       {
-          "Id":"aas_cd_mt_grill_od_temperature",
-          "Iri":"",
-          "IdShort":"ConceptDescription",
-          "ReferenceElementIds":[
-             "aas_r_aas_cd_mt_grill_od_temperature"
-          ],
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"ConceptDescription"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Category":"",
-          "Checksum":"",
-          "DataSpecification":{
-             "Id":"aas_ds_mt_grill_od_temperature",
-             "IdShort":"DataSpecification",
-             "Definition":{
-                "LangString":{
-                   
-                }
-             },
-             "PreferredName":{
-                "LangString":{
-                   
-                }
-             },
-             "ShortName":{
-                "LangString":{
-                   
-                }
-             },
-             "DataType":13,
-             "LevelType":3,
-             "SourceOfDefinition":"",
-             "Symbol":"",
-             "Unit":"°C",
-             "UnitIdValue":"",
-             "Value":"",
-             "ValueFormat":""
-          }
-       },
-       {
-          "Id":"aas_cd_mt_oven_od_temperature",
-          "Iri":"",
-          "IdShort":"ConceptDescription",
-          "ReferenceElementIds":[
-             "aas_r_aas_cd_mt_oven_od_temperature"
-          ],
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"ConceptDescription"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Category":"",
-          "Checksum":"",
-          "DataSpecification":{
-             "Id":"aas_ds_mt_oven_od_temperature",
-             "IdShort":"DataSpecification",
-             "Definition":{
-                "LangString":{
-                   
-                }
-             },
-             "PreferredName":{
-                "LangString":{
-                   
-                }
-             },
-             "ShortName":{
-                "LangString":{
-                   
-                }
-             },
-             "DataType":13,
-             "LevelType":3,
-             "SourceOfDefinition":"",
-             "Symbol":"",
-             "Unit":"°C",
-             "UnitIdValue":"",
-             "Value":"",
-             "ValueFormat":""
-          }
-       },
-       {
-          "Id":"aas_cd_mt_dishWasher_od_temperature",
-          "Iri":"",
-          "IdShort":"ConceptDescription",
-          "ReferenceElementIds":[
-             "aas_r_aas_cd_mt_dishWasher_od_temperature"
-          ],
-          "Administration":{
-             "Version":"1",
-             "Revision":"1"
-          },
-          "Description":{
-             "LangString":{
-                
-             }
-          },
-          "DisplayName":{
-             "LangString":{
-                "EN":"ConceptDescription"
-             }
-          },
-          "Tags":{
-             "Markers":{
-                
-             },
-             "Values":{
-                
-             }
-          },
-          "Category":"",
-          "Checksum":"",
-          "DataSpecification":{
-             "Id":"aas_ds_mt_dishWasher_od_temperature",
-             "IdShort":"DataSpecification",
-             "Definition":{
-                "LangString":{
-                   
-                }
-             },
-             "PreferredName":{
-                "LangString":{
-                   
-                }
-             },
-             "ShortName":{
-                "LangString":{
-                   
-                }
-             },
-             "DataType":13,
-             "LevelType":3,
-             "SourceOfDefinition":"",
-             "Symbol":"",
-             "Unit":"°C",
-             "UnitIdValue":"",
-             "Value":"",
-             "ValueFormat":""
-          }
-       }
-    ]
- }
+   "Factories": [
+      {
+         "Id": "aas_f_seattle",
+         "Iri": "https://aasfactory.com/aas/he/aas/instance/aas_f_seattle",
+         "IdShort": "Seattle Factory",
+         "DerivedFrom": "",
+         "ReferenceElementIds": [],
+         "Description": {
+            "LangString": {}
+         },
+         "DisplayName": {
+            "LangString": {
+               "EN": "Seattle Factory"
+            }
+         },
+         "Tags": {
+            "Markers": {},
+            "Values": {}
+         },
+         "Administration": {
+            "Version": "1",
+            "Revision": "1"
+         },
+         "Category": "",
+         "Checksum": "",
+         "SubModels": [
+            {
+               "Id": "aas_sm_f_seattle_np",
+               "Iri": "https://aasfactory.com/aas/he/sm/instance/aas_sm_f_seattle_np",
+               "IdShort": 4,
+               "Kind": {
+                  "kind": 2
+               },
+               "Description": {
+                  "LangString": {}
+               },
+               "DisplayName": {
+                  "LangString": {
+                     "EN": "Nameplate"
+                  }
+               },
+               "Tags": {
+                  "Markers": {},
+                  "Values": {}
+               },
+               "Administration": {
+                  "Version": "1",
+                  "Revision": "1"
+               },
+               "Category": "",
+               "Checksum": "",
+               "SemanticIdValue": "",
+               "Properties": [
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "PlaceName"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "SemanticIdReference": null,
+                     "Id": "aas_sme_f_seattle_np_placename",
+                     "IdShort": "PlaceName",
+                     "ValueType": 9,
+                     "Value": "Washington, USA"
+                  },
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "TimeZone"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "SemanticIdReference": null,
+                     "Id": "aas_sme_f_seattle_np_timezone",
+                     "IdShort": "TimeZone",
+                     "ValueType": 9,
+                     "Value": "PST"
+                  }
+               ],
+               "ReferenceElements": [],
+               "SubModelElementLists": [],
+               "SubModelElementCollections": []
+            },
+            {
+               "Id": "aas_sm_f_seattle_m",
+               "Iri": "https://aasfactory.com/aas/he/sm/instance/aas_sm_f_seattle_m",
+               "IdShort": 3,
+               "Kind": {
+                  "kind": 2
+               },
+               "Description": {
+                  "LangString": {}
+               },
+               "DisplayName": {
+                  "LangString": {
+                     "EN": "Machines"
+                  }
+               },
+               "Tags": {
+                  "Markers": {},
+                  "Values": {}
+               },
+               "Administration": {
+                  "Version": "1",
+                  "Revision": "1"
+               },
+               "Category": "",
+               "Checksum": "",
+               "SemanticIdValue": "",
+               "Properties": [],
+               "ReferenceElements": [
+                  {
+                     "Id": "aas_re_m_robot1",
+                     "IdShort": "Robot 1Ref",
+                     "SemanticIdValue": "",
+                     "Key1": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key2": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key3": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key4": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key5": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key6": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key7": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key8": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Robot 1Ref"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": ""
+                  },
+                  {
+                     "Id": "aas_re_m_robot2",
+                     "IdShort": "Robot 2Ref",
+                     "SemanticIdValue": "",
+                     "Key1": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key2": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key3": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key4": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key5": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key6": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key7": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key8": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Robot 2Ref"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": ""
+                  }
+               ],
+               "SubModelElementLists": [],
+               "SubModelElementCollections": []
+            },
+            {
+               "Id": "aas_sm_f_seattle_l",
+               "Iri": "https://aasfactory.com/aas/he/sm/instance/aas_sm_f_seattle_l",
+               "IdShort": 2,
+               "Kind": {
+                  "kind": 2
+               },
+               "Description": {
+                  "LangString": {}
+               },
+               "DisplayName": {
+                  "LangString": {
+                     "EN": "Lines"
+                  }
+               },
+               "Tags": {
+                  "Markers": {},
+                  "Values": {}
+               },
+               "Administration": {
+                  "Version": "1",
+                  "Revision": "1"
+               },
+               "Category": "",
+               "Checksum": "",
+               "SemanticIdValue": "",
+               "Properties": [],
+               "ReferenceElements": [
+                  {
+                     "Id": "aas_re_l_line1",
+                     "IdShort": "Line 1Ref",
+                     "SemanticIdValue": "",
+                     "Key1": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key2": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key3": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key4": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key5": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key6": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key7": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key8": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Line 1Ref"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": ""
+                  }
+               ],
+               "SubModelElementLists": [],
+               "SubModelElementCollections": []
+            }
+         ],
+         "AssetInformation": {
+            "AssetKind": {
+               "assetKind": 2
+            },
+            "DefaultThumbnailPath": "",
+            "GlobalAssetIdValue": "",
+            "SpecificAssetIdValue": ""
+         }
+      }
+   ],
+   "Machines": [
+      {
+         "Id": "aas_m_robot1",
+         "Iri": "https://aasfactory.com/aas/he/aas/instance/aas_m_robot1",
+         "IdShort": "Robot 1",
+         "DerivedFrom": "aas_mt_robot",
+         "ReferenceElementIds": [
+            "aas_re_m_robot1"
+         ],
+         "Description": {
+            "LangString": {}
+         },
+         "DisplayName": {
+            "LangString": {
+               "EN": "Robot 1"
+            }
+         },
+         "Tags": {
+            "Markers": {},
+            "Values": {}
+         },
+         "Administration": {
+            "Version": "1",
+            "Revision": "1"
+         },
+         "Category": "",
+         "Checksum": "",
+         "SubModels": [
+            {
+               "Id": "aas_sm_m_robot1_od",
+               "Iri": "https://aasfactory.com/aas/he/sm/instance/aas_sm_m_robot1_od",
+               "IdShort": 5,
+               "Kind": {
+                  "kind": 2
+               },
+               "Description": {
+                  "LangString": {}
+               },
+               "DisplayName": {
+                  "LangString": {
+                     "EN": "OperationalData"
+                  }
+               },
+               "Tags": {
+                  "Markers": {},
+                  "Values": {}
+               },
+               "Administration": {
+                  "Version": "1",
+                  "Revision": "1"
+               },
+               "Category": "",
+               "Checksum": "",
+               "SemanticIdValue": "",
+               "Properties": [
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Temperature"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "SemanticIdReference": null,
+                     "Id": "aas_sme_m_robot1_od_temperature",
+                     "IdShort": "temperature",
+                     "ValueType": 4,
+                     "Value": ""
+                  },
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Start Time"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "SemanticIdReference": null,
+                     "Id": "aas_sme_m_robot1_od_starttime",
+                     "IdShort": "starttime",
+                     "ValueType": 3,
+                     "Value": ""
+                  },
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "End Time"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "SemanticIdReference": null,
+                     "Id": "aas_sme_m_robot1_od_endtime",
+                     "IdShort": "endtime",
+                     "ValueType": 3,
+                     "Value": ""
+                  }
+               ],
+               "ReferenceElements": [],
+               "SubModelElementLists": [],
+               "SubModelElementCollections": []
+            }
+         ],
+         "AssetInformation": {
+            "AssetKind": {
+               "assetKind": 2
+            },
+            "DefaultThumbnailPath": "",
+            "GlobalAssetIdValue": "",
+            "SpecificAssetIdValue": ""
+         }
+      },
+      {
+         "Id": "aas_m_robot2",
+         "Iri": "https://aasfactory.com/aas/he/aas/instance/aas_m_robot2",
+         "IdShort": "Robot 2",
+         "DerivedFrom": "aas_mt_robot",
+         "ReferenceElementIds": [
+            "aas_re_m_robot2"
+         ],
+         "Description": {
+            "LangString": {}
+         },
+         "DisplayName": {
+            "LangString": {
+               "EN": "Robot 2"
+            }
+         },
+         "Tags": {
+            "Markers": {},
+            "Values": {}
+         },
+         "Administration": {
+            "Version": "1",
+            "Revision": "1"
+         },
+         "Category": "",
+         "Checksum": "",
+         "SubModels": [
+            {
+               "Id": "aas_sm_m_robot2_od",
+               "Iri": "https://aasfactory.com/aas/he/sm/instance/aas_sm_m_robot2_od",
+               "IdShort": 5,
+               "Kind": {
+                  "kind": 2
+               },
+               "Description": {
+                  "LangString": {}
+               },
+               "DisplayName": {
+                  "LangString": {
+                     "EN": "OperationalData"
+                  }
+               },
+               "Tags": {
+                  "Markers": {},
+                  "Values": {}
+               },
+               "Administration": {
+                  "Version": "1",
+                  "Revision": "1"
+               },
+               "Category": "",
+               "Checksum": "",
+               "SemanticIdValue": "",
+               "Properties": [
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Temperature"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "SemanticIdReference": null,
+                     "Id": "aas_sme_m_robot2_od_temperature",
+                     "IdShort": "temperature",
+                     "ValueType": 4,
+                     "Value": ""
+                  },
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Start Time"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "SemanticIdReference": null,
+                     "Id": "aas_sme_m_robot2_od_starttime",
+                     "IdShort": "starttime",
+                     "ValueType": 3,
+                     "Value": ""
+                  },
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "End Time"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "SemanticIdReference": null,
+                     "Id": "aas_sme_m_robot2_od_endtime",
+                     "IdShort": "endtime",
+                     "ValueType": 3,
+                     "Value": ""
+                  }
+               ],
+               "ReferenceElements": [],
+               "SubModelElementLists": [],
+               "SubModelElementCollections": []
+            }
+         ],
+         "AssetInformation": {
+            "AssetKind": {
+               "assetKind": 2
+            },
+            "DefaultThumbnailPath": "",
+            "GlobalAssetIdValue": "",
+            "SpecificAssetIdValue": ""
+         }
+      }
+   ],
+   "Lines": [
+      {
+         "Id": "aas_l_line1",
+         "Iri": "https://aasfactory.com/aas/he/aas/instance/aas_l_line1",
+         "IdShort": "Line 1",
+         "DerivedFrom": "",
+         "ReferenceElementIds": [
+            "aas_re_l_line1"
+         ],
+         "Description": {
+            "LangString": {}
+         },
+         "DisplayName": {
+            "LangString": {
+               "EN": "Line 1"
+            }
+         },
+         "Tags": {
+            "Markers": {},
+            "Values": {}
+         },
+         "Administration": {
+            "Version": "1",
+            "Revision": "1"
+         },
+         "Category": "",
+         "Checksum": "",
+         "SubModels": [
+            {
+               "Id": "aas_sm_l_line1_m",
+               "Iri": "https://aasfactory.com/aas/he/sm/instance/aas_sm_l_line1_m",
+               "IdShort": 3,
+               "Kind": {
+                  "kind": 2
+               },
+               "Description": {
+                  "LangString": {}
+               },
+               "DisplayName": {
+                  "LangString": {
+                     "EN": "Machines"
+                  }
+               },
+               "Tags": {
+                  "Markers": {},
+                  "Values": {}
+               },
+               "Administration": {
+                  "Version": "1",
+                  "Revision": "1"
+               },
+               "Category": "",
+               "Checksum": "",
+               "SemanticIdValue": "",
+               "Properties": [],
+               "ReferenceElements": [
+                  {
+                     "Id": "aas_re_m_robot1",
+                     "IdShort": "Robot 1Ref",
+                     "SemanticIdValue": "",
+                     "Key1": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key2": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key3": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key4": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key5": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key6": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key7": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key8": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Robot 1Ref"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": ""
+                  },
+                  {
+                     "Id": "aas_re_m_robot2",
+                     "IdShort": "Robot 2Ref",
+                     "SemanticIdValue": "",
+                     "Key1": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key2": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key3": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key4": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key5": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key6": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key7": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Key8": {
+                        "Type": 0,
+                        "Value": ""
+                     },
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Robot 2Ref"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Category": "",
+                     "Checksum": ""
+                  }
+               ],
+               "SubModelElementLists": [],
+               "SubModelElementCollections": []
+            },
+            {
+               "Id": "aas_sm_l_line1_pf",
+               "Iri": "https://aasfactory.com/aas/he/sm/instance/aas_sm_l_line1_pf",
+               "IdShort": 6,
+               "Kind": {
+                  "kind": 2
+               },
+               "Description": {
+                  "LangString": {}
+               },
+               "DisplayName": {
+                  "LangString": {
+                     "EN": "ProcessFlow"
+                  }
+               },
+               "Tags": {
+                  "Markers": {},
+                  "Values": {}
+               },
+               "Administration": {
+                  "Version": "1",
+                  "Revision": "1"
+               },
+               "Category": "",
+               "Checksum": "",
+               "SemanticIdValue": "",
+               "Properties": [],
+               "ReferenceElements": [],
+               "SubModelElementLists": [],
+               "SubModelElementCollections": [
+                  {
+                     "Id": "aas_smec_l_line1_pf",
+                     "IdShort": "Machines",
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "Kind": {
+                        "kind": 2
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Machines"
+                        }
+                     },
+                     "SubModelElementCollections": [
+                        {
+                           "Id": "aas_smec_l_line1_pf_robot1",
+                           "IdShort": "Robot 1",
+                           "Category": "",
+                           "Checksum": "",
+                           "SemanticIdValue": "",
+                           "Kind": {
+                              "kind": 2
+                           },
+                           "Tags": {
+                              "Markers": {},
+                              "Values": {}
+                           },
+                           "Description": {
+                              "LangString": {}
+                           },
+                           "DisplayName": {
+                              "LangString": {
+                                 "EN": "Robot 1"
+                              }
+                           },
+                           "SubModelElementCollections": [],
+                           "ReferenceElements": [
+                              {
+                                 "Id": "aas_re_m_robot1",
+                                 "IdShort": "Robot 1Ref",
+                                 "SemanticIdValue": "",
+                                 "Key1": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key2": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key3": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key4": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key5": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key6": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key7": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key8": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Description": {
+                                    "LangString": {}
+                                 },
+                                 "DisplayName": {
+                                    "LangString": {
+                                       "EN": "Robot 1Ref"
+                                    }
+                                 },
+                                 "Tags": {
+                                    "Markers": {},
+                                    "Values": {}
+                                 },
+                                 "Kind": {
+                                    "kind": 2
+                                 },
+                                 "Category": "",
+                                 "Checksum": ""
+                              }
+                           ],
+                           "SubModelElementLists": [
+                              {
+                                 "Id": "aas_smel_l_line1_pf_robot1_s",
+                                 "IdShort": "Successors",
+                                 "Kind": {
+                                    "kind": 2
+                                 },
+                                 "Description": {
+                                    "LangString": {}
+                                 },
+                                 "DisplayName": {
+                                    "LangString": {
+                                       "EN": "Successors"
+                                    }
+                                 },
+                                 "Tags": {
+                                    "Markers": {},
+                                    "Values": {}
+                                 },
+                                 "Category": "",
+                                 "Checksum": "",
+                                 "OrderRelevant": false,
+                                 "SemanticIdValue": "",
+                                 "SemanticIdValueOfListElements": "",
+                                 "TypeValueListElement": 13,
+                                 "ValueTypeOfElement": 0,
+                                 "ReferenceElements": [
+                                    {
+                                       "Id": "aas_re_m_robot2",
+                                       "IdShort": "Robot 2Ref",
+                                       "SemanticIdValue": "",
+                                       "Key1": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key2": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key3": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key4": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key5": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key6": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key7": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key8": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Description": {
+                                          "LangString": {}
+                                       },
+                                       "DisplayName": {
+                                          "LangString": {
+                                             "EN": "Robot 2Ref"
+                                          }
+                                       },
+                                       "Tags": {
+                                          "Markers": {},
+                                          "Values": {}
+                                       },
+                                       "Kind": {
+                                          "kind": 2
+                                       },
+                                       "Category": "",
+                                       "Checksum": ""
+                                    }
+                                 ],
+                                 "Properties": []
+                              },
+                              {
+                                 "Id": "aas_smel_l_line1_pf_robot1_p",
+                                 "IdShort": "Predecessors",
+                                 "Kind": {
+                                    "kind": 2
+                                 },
+                                 "Description": {
+                                    "LangString": {}
+                                 },
+                                 "DisplayName": {
+                                    "LangString": {
+                                       "EN": "Predecessors"
+                                    }
+                                 },
+                                 "Tags": {
+                                    "Markers": {},
+                                    "Values": {}
+                                 },
+                                 "Category": "",
+                                 "Checksum": "",
+                                 "OrderRelevant": false,
+                                 "SemanticIdValue": "",
+                                 "SemanticIdValueOfListElements": "",
+                                 "TypeValueListElement": 13,
+                                 "ValueTypeOfElement": 0,
+                                 "ReferenceElements": [],
+                                 "Properties": []
+                              }
+                           ]
+                        },
+                        {
+                           "Id": "aas_smec_l_line1_pf_robot2",
+                           "IdShort": "Robot 2",
+                           "Category": "",
+                           "Checksum": "",
+                           "SemanticIdValue": "",
+                           "Kind": {
+                              "kind": 2
+                           },
+                           "Tags": {
+                              "Markers": {},
+                              "Values": {}
+                           },
+                           "Description": {
+                              "LangString": {}
+                           },
+                           "DisplayName": {
+                              "LangString": {
+                                 "EN": "Robot 2"
+                              }
+                           },
+                           "SubModelElementCollections": [],
+                           "ReferenceElements": [
+                              {
+                                 "Id": "aas_re_m_robot2",
+                                 "IdShort": "Robot 2Ref",
+                                 "SemanticIdValue": "",
+                                 "Key1": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key2": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key3": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key4": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key5": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key6": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key7": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Key8": {
+                                    "Type": 0,
+                                    "Value": ""
+                                 },
+                                 "Description": {
+                                    "LangString": {}
+                                 },
+                                 "DisplayName": {
+                                    "LangString": {
+                                       "EN": "Robot 2Ref"
+                                    }
+                                 },
+                                 "Tags": {
+                                    "Markers": {},
+                                    "Values": {}
+                                 },
+                                 "Kind": {
+                                    "kind": 2
+                                 },
+                                 "Category": "",
+                                 "Checksum": ""
+                              }
+                           ],
+                           "SubModelElementLists": [
+                              {
+                                 "Id": "aas_smel_l_line1_pf_robot2_s",
+                                 "IdShort": "Successors",
+                                 "Kind": {
+                                    "kind": 2
+                                 },
+                                 "Description": {
+                                    "LangString": {}
+                                 },
+                                 "DisplayName": {
+                                    "LangString": {
+                                       "EN": "Successors"
+                                    }
+                                 },
+                                 "Tags": {
+                                    "Markers": {},
+                                    "Values": {}
+                                 },
+                                 "Category": "",
+                                 "Checksum": "",
+                                 "OrderRelevant": false,
+                                 "SemanticIdValue": "",
+                                 "SemanticIdValueOfListElements": "",
+                                 "TypeValueListElement": 13,
+                                 "ValueTypeOfElement": 0,
+                                 "ReferenceElements": [],
+                                 "Properties": []
+                              },
+                              {
+                                 "Id": "aas_smel_l_line1_pf_robot2_p",
+                                 "IdShort": "Predecessors",
+                                 "Kind": {
+                                    "kind": 2
+                                 },
+                                 "Description": {
+                                    "LangString": {}
+                                 },
+                                 "DisplayName": {
+                                    "LangString": {
+                                       "EN": "Predecessors"
+                                    }
+                                 },
+                                 "Tags": {
+                                    "Markers": {},
+                                    "Values": {}
+                                 },
+                                 "Category": "",
+                                 "Checksum": "",
+                                 "OrderRelevant": false,
+                                 "SemanticIdValue": "",
+                                 "SemanticIdValueOfListElements": "",
+                                 "TypeValueListElement": 13,
+                                 "ValueTypeOfElement": 0,
+                                 "ReferenceElements": [
+                                    {
+                                       "Id": "aas_re_m_robot1",
+                                       "IdShort": "Robot 1Ref",
+                                       "SemanticIdValue": "",
+                                       "Key1": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key2": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key3": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key4": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key5": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key6": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key7": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Key8": {
+                                          "Type": 0,
+                                          "Value": ""
+                                       },
+                                       "Description": {
+                                          "LangString": {}
+                                       },
+                                       "DisplayName": {
+                                          "LangString": {
+                                             "EN": "Robot 1Ref"
+                                          }
+                                       },
+                                       "Tags": {
+                                          "Markers": {},
+                                          "Values": {}
+                                       },
+                                       "Kind": {
+                                          "kind": 2
+                                       },
+                                       "Category": "",
+                                       "Checksum": ""
+                                    }
+                                 ],
+                                 "Properties": []
+                              }
+                           ]
+                        }
+                     ],
+                     "ReferenceElements": [],
+                     "SubModelElementLists": []
+                  }
+               ]
+            }
+         ],
+         "AssetInformation": {
+            "AssetKind": {
+               "assetKind": 2
+            },
+            "DefaultThumbnailPath": "",
+            "GlobalAssetIdValue": "",
+            "SpecificAssetIdValue": ""
+         }
+      }
+   ],
+   "MachineTypes": [
+      {
+         "Id": "aas_mt_robot",
+         "Iri": "https://aasfactory.com/aas/he/aas/type/aas_mt_robot",
+         "IdShort": "Robot",
+         "DerivedFrom": "",
+         "ReferenceElementIds": [],
+         "Description": {
+            "LangString": {}
+         },
+         "DisplayName": {
+            "LangString": {
+               "EN": "Robot"
+            }
+         },
+         "Tags": {
+            "Markers": {},
+            "Values": {}
+         },
+         "Administration": {
+            "Version": "1",
+            "Revision": "1"
+         },
+         "Category": "",
+         "Checksum": "",
+         "SubModels": [
+            {
+               "Id": "aas_sm_mt_robot_od",
+               "Iri": "https://aasfactory.com/aas/he/sm/type/aas_sm_mt_robot_od",
+               "IdShort": 5,
+               "Kind": {
+                  "kind": 1
+               },
+               "Description": {
+                  "LangString": {}
+               },
+               "DisplayName": {
+                  "LangString": {
+                     "EN": "OperationalData"
+                  }
+               },
+               "Tags": {
+                  "Markers": {},
+                  "Values": {}
+               },
+               "Administration": {
+                  "Version": "1",
+                  "Revision": "1"
+               },
+               "Category": "",
+               "Checksum": "",
+               "SemanticIdValue": "",
+               "Properties": [
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Temperature"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 1
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "aas_cd_mt_robot_od_temperature",
+                     "SemanticIdReference": {
+                        "Id": "aas_r_aas_cd_mt_robot_od_temperature",
+                        "Key1": {
+                           "Type": 0,
+                           "Value": ""
+                        },
+                        "Key2": {
+                           "Type": 0,
+                           "Value": ""
+                        },
+                        "Key3": {
+                           "Type": 0,
+                           "Value": ""
+                        },
+                        "Key4": {
+                           "Type": 0,
+                           "Value": ""
+                        },
+                        "Key5": {
+                           "Type": 0,
+                           "Value": ""
+                        },
+                        "Key6": {
+                           "Type": 0,
+                           "Value": ""
+                        },
+                        "Key7": {
+                           "Type": 0,
+                           "Value": ""
+                        },
+                        "Key8": {
+                           "Type": 0,
+                           "Value": ""
+                        },
+                        "Type": 2
+                     },
+                     "Id": "aas_sme_mt_robot_od_temperature",
+                     "IdShort": "temperature",
+                     "ValueType": 4,
+                     "Value": ""
+                  },
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "Start Time"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 1
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "SemanticIdReference": null,
+                     "Id": "aas_sme_mt_robot_od_starttime",
+                     "IdShort": "starttime",
+                     "ValueType": 3,
+                     "Value": ""
+                  },
+                  {
+                     "Description": {
+                        "LangString": {}
+                     },
+                     "DisplayName": {
+                        "LangString": {
+                           "EN": "End Time"
+                        }
+                     },
+                     "Tags": {
+                        "Markers": {},
+                        "Values": {}
+                     },
+                     "Kind": {
+                        "kind": 1
+                     },
+                     "Category": "",
+                     "Checksum": "",
+                     "SemanticIdValue": "",
+                     "SemanticIdReference": null,
+                     "Id": "aas_sme_mt_robot_od_endtime",
+                     "IdShort": "endtime",
+                     "ValueType": 3,
+                     "Value": ""
+                  }
+               ],
+               "ReferenceElements": [],
+               "SubModelElementLists": [],
+               "SubModelElementCollections": []
+            }
+         ],
+         "AssetInformation": {
+            "AssetKind": {
+               "assetKind": 1
+            },
+            "DefaultThumbnailPath": "",
+            "GlobalAssetIdValue": "",
+            "SpecificAssetIdValue": ""
+         }
+      }
+   ],
+   "ConceptDescriptions": [
+      {
+         "Id": "aas_cd_mt_robot_od_temperature",
+         "Iri": "",
+         "IdShort": "ConceptDescription",
+         "ReferenceElementIds": [
+            "aas_r_aas_cd_mt_robot_od_temperature"
+         ],
+         "Administration": {
+            "Version": "1",
+            "Revision": "1"
+         },
+         "Description": {
+            "LangString": {}
+         },
+         "DisplayName": {
+            "LangString": {
+               "EN": "ConceptDescription"
+            }
+         },
+         "Tags": {
+            "Markers": {},
+            "Values": {}
+         },
+         "Category": "",
+         "Checksum": "",
+         "DataSpecification": {
+            "Id": "aas_ds_mt_robot_od_temperature",
+            "IdShort": "DataSpecification",
+            "Definition": {
+               "LangString": {}
+            },
+            "PreferredName": {
+               "LangString": {}
+            },
+            "ShortName": {
+               "LangString": {}
+            },
+            "DataType": 13,
+            "LevelType": 3,
+            "SourceOfDefinition": "",
+            "Symbol": "",
+            "Unit": "°C",
+            "UnitIdValue": "",
+            "Value": "",
+            "ValueFormat": ""
+         }
+      }
+   ]
+}
