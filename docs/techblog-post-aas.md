@@ -186,30 +186,6 @@ The AAS format data is converted to DTDL specific format to be able to create az
 
 [Here](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/ConceptDescription.cs) is one of the ADT `Twins.ConceptDescription` POCO class definition for reference.
 
-### Model and Streaming Flows
-
-Based on the understanding we have so far on the AAS conversion and ADT conversion, let's now look at how all the information ties to both the flows.
-
-The purpose of `Model transformation flow` is to:
-
-1. Ingest the definition of the factory, the hierarchy of the factory, and all the factory's assets
-1. Convert the factory definition into an intermediate AAS representation.
-1. Convert the intermediate AAS data into a graph on ADT using the AAS metamodels and properties.
-
-Below diagram represents how the implementation is done in detail and the details of the function can be found [here](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/README.md).
-
-![Model transaformation flow](./assets/plantuml/output/model_flow.png)
-
-The purpose of `Streaming data flow` is to:
-
-1. Ingest the new telemetry sample from the factory
-1. Convert the telemetry sample into a pseudo-AAS object to
-1. Update the necessary machine properties of the corresponding twin on the graph.
-
-Below diagram represents how the implementation is done in detail and the details of the function can be found [here](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.StreamingDataFlow/README.md).
-
-![ADT Conversion in streaming data flow](./assets/plantuml/output/streaming_flow.png)
-
 ## Summary
 
 The [github sample](https://github.com/Azure-Samples/aas-digital-factory) provides the code and deployment script for the described architecture. Although converting to AAS adds complexity, it provides an abstraction from the factory model updates.
