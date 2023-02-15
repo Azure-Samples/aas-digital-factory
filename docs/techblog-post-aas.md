@@ -31,7 +31,7 @@ Creating this connected system requires representing `Contoso's` current structu
 Our goal is to represent `Contoso's` current structure as a digital twin graph. The process involves two main flows: model transformation and streaming data.
 In the model data flow, the system will parse the representation of the factory graph and construct the digital twins.
 The streaming data flow will update the digital twins accordingly as operational data or key performance indicators are received.
-Additionally, the user should have access to historical data to identify patterns.
+Additionally, our end users, John and his colleagues, should have access to historical data to identify patterns.
 
 ## Architecture
 
