@@ -123,7 +123,7 @@ Let's first review how the AAS conversion is implemented.
 For AAS conversion, we use a list of mapping rules to translate the factory data to data based on Asset Administration Shell (AAS) metamodel.
 This step is really important as it helps with converting custom factory data to predefined standard AAS models.
 
-Let's try to understand by using sample code of the custom machine model and see how it is converted into standard AAS components: Submodels and Reference Elements. First, we will have to look at one of the mapping rule defined to transform custom models to standard AAS models. Let's uses this sample code [file](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/AasConverters/MachineConverter.cs) as reference. This piece of code does the necessary conversion to standard models.
+Let's try to understand by using sample code of the custom machine model and see how it is converted into standard AAS components: Submodels and Reference Elements. First, we will have to look at one of the mapping rule defined to transform custom models to standard AAS models. Let's use this sample code [file](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/AasConverters/MachineConverter.cs) as reference. This piece of code does the necessary conversion to standard models.
 
 Here is an example AAS machine as per `Contoso` data model represented as JSON:
 
