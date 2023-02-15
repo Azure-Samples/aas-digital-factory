@@ -183,11 +183,10 @@ Based on the ADT representation above, you can observe by colors that:
 
 - Purple nodes are DTDL AAS shells such as factory, line, machine and machine type.
 - Aqua nodes are DTDL Submodels. A DTDL AAS may contain many submodels. For example, the AAS Factory (Seattle's Factory) has three submodels to access information about the Nameplate, Machines and Lines.
-- Blue, yellow and red nodes are DTDL Properties (representing different data types). For example, the Submodel OperationalData (of each Robot) reports temperature data.
+- Blue, yellow and red nodes are DTDL Properties (representing different data types). For example, the Submodel Operational Data (of each Robot) reports temperature data.
 
-To accomplish this result, we encourage using the Azure SDK for Azure Digital Twins interactions. We suggest start creating POCO classes here as well for the AAS twins and relationships definitions in the implementation. As an example, here is of the [ADT Submodel Twin POCO class definition](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/Submodel.cs#L12).
-
-Now that the POCO classes for AAS twins and relationships are defined, you need to implement the logic to map the AAS represention into the ADT representation. For that, you need to traverse all your AAS factory data from top (Shell) to bottom (Properties). For example, create first the twin for DTDL AAS, then create twins the DTDL submodels that are connected, and finally create the relationships between these DTDL AAS and Submodels. This [code snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ShellRepository.cs#L27-L47) describes what we just talked about.
+Here is an example of [ADT Submodel Twin POCO class definition](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Models/Adt/Twins/Submodel.cs#L12).
+Now that the POCO classes for AAS twins and relationships are defined, you need to implement the logic to map the AAS represention into the ADT representation. For that, you need to traverse all your AAS factory data from top (Shell) to bottom (Properties). For example, create first the twin for DTDL AAS, then create twins of the DTDL submodels that are connected, and finally create the relationships between these DTDL AAS and Submodels using the ADT SDK. This [code snippet](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/ShellRepository.cs#L27-L47) describes what we just talked about.
 
 ## Summary
 
@@ -195,9 +194,5 @@ AAS is a standard developed by the Industrial Internet Consortium (IIC) for desc
 
 We can use the AAS standard as a metamodel in ADT to model the assets within ADT; such as machines, equipment, and devices. By doing so, you can provide a standardized way of describing the assets, which can help to simplify integration with other systems without dealing with defining models.
 
-We can use the AAS metamodel to create a digital twin model of an asset that includes its physical characteristics, such as its location, dimensions, and components, as well as its functional characteristics, such as its capabilities and operational parameters. We can utilize AAS to monitor the performance of assets within the digital twin environment, such as measuring their energy consumption, temperature, and other key indicators that can be represented by AAS standard submodels. We may also use AAS standard to represent schedule and track maintenance activities for assets within ADT, such as conducting inspections, replacing parts, and performing repairs. Overall, using AAS in Azure Digital Twins can help us to create a more comprehensive and interoperable digital twin environment that can support a wide range of industrial applications.
-
-In the proposed architecture, we can encapsulate the complexity of converting a factory data model to AAS
-by adding a logical layer on top of ADT to handle the AAS request and encapsulate the complexity of AAS from top layer.  
-
-The [github sample](https://github.com/Azure-Samples/aas-digital-factory) provides the code and deployment script for the described architecture.
+In the proposed architecture, we encapsulate the complexity of converting a factory data model to AAS
+by adding a logical layer on top of ADT to handle the AAS request. The [github sample](https://github.com/Azure-Samples/aas-digital-factory) provides the complete code along with the deployment script for the described architecture.
