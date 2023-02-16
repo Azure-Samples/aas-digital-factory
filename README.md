@@ -1,5 +1,8 @@
 # AAS Factory Azure Integrations <!-- omit in toc -->
 
+- [Solution Overview](#solution-overview)
+  - [Architecture](#architecture)
+  - [Technologies Used](#technologies-used)
 - [How to use the sample](#how-to-use-the-sample)
   - [Prerequisites](#prerequisites)
     - [Software pre-requisites](#software-pre-requisites)
@@ -20,6 +23,24 @@ The folder structure for this repo is as below:
   - AasFactory.Services: contains any utility services shared across multiple Functions, e.g. a service to interact with the Azure Blob Storage SDK.
 - tools:
 any tools and components that may be used during the development (such as event hub event producer)
+
+## Solution Overview
+
+This solution has two different flows (Model Data Flow and Streaming Data Flow). Model Data Flow takes in a definition of a factory, converts the data to a JSON AAS representation, and creates the AAS in Azure Digital Twins (ADT).
+Streaming Data Flow takes in the telemetry data, converts the data into a lightweight AAS representation, and updates the properties in ADT.
+
+### Architecture
+
+![Overall Architecture](./docs/assets/Swimlane%20-%20overall%20process.png)
+
+More on the overall architecture can be found [here](./docs/architecture.md).
+
+### Technologies Used
+
+- [Azure Data Explorer](https://azure.microsoft.com/en-au/products/data-explorer/)
+- [Azure Event Hubs](https://azure.microsoft.com/en-au/products/event-hubs/)
+- [Azure Functions](https://azure.microsoft.com/en-au/products/functions/)
+- [Azure Storage Account](https://azure.microsoft.com/en-au/products/storage/data-lake-storage/)
 
 ## How to use the sample
 
