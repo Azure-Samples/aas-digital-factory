@@ -18,17 +18,17 @@ The authors of this [GitHub repository](https://github.com/digitaltwinconsortium
 
 ### Sample Scenario
 
-Imagine a real-life scenario of `Contoso`, a delivery company that uses robots to pick products from a warehouse and prepare them for shipping.
+Imagine a real-life scenario of Contoso, a delivery company that uses robots to pick products from a warehouse and prepare them for shipping.
 The company has two facilities located in Seattle and Boston, each with a line of two robots that are of the same type and share common parts.
 
 To keep track of the performance of the robots, they collect a vast amount of telemetry data, including operational data and key performance indicators, and send this information to the cloud.
 John, who works at Contoso, uses a dashboard to monitor the data and take action if there are any issues, such as downtime, to ensure timely delivery to customers.
 
-Creating this connected system requires representing `Contoso's` current structure, including its two facilities, one line, two machines, and components, in a graph.
+Creating this connected system requires representing Contoso's current structure, including its two facilities, one line, two machines, and components, in a graph.
 
-![Contoso's ontology](./assets/data-model-diagram.png)
+![Contoso's ontology](./assets/data-model-diagram-small.png)
 
-Our goal is to represent `Contoso's` current structure as a digital twin graph. The process involves two main flows: model transformation and streaming data.
+Our goal is to represent Contoso's current structure as a digital twin graph. The process involves two main flows: model transformation and streaming data.
 In the model data flow, the system will parse the representation of the factory graph and construct the digital twins.
 The streaming data flow will update the digital twins accordingly as operational data or key performance indicators are received.
 Additionally, our end users, John and his colleagues, should have access to historical data to identify patterns.
@@ -80,11 +80,11 @@ There are few things to call out here:
 - Attributes that describe the factory object. For example, `id` represents the unique identifier, `name` represents the code name, `displayName` represents the friendly name and `placeName` represents the location.
 - Attributes that define relationships to other factory objects. For example, the machine object with id `robot1` has a relationship to the factory object `contoso`.
 
-A full `Contoso` data model representation, which includes lines, machines, machine types and concept description, can be found in the [model data from the sample project](../samples/model-data/Factory.json).
+A full Contoso data model representation, which includes lines, machines, machine types and concept description, can be found in the [model data from the sample project](../samples/model-data/Factory.json).
 
 The streaming data flow only requires one data model to describe its input, which defines property updates for a particular machine.
 
-Here is an example machine update as per `Contoso` data model represented as JSON:
+Here is an example machine update as per Contoso data model represented as JSON:
 
 ```json
         {
@@ -128,7 +128,7 @@ This step is really important as it helps with converting custom factory data to
 
 Let's try to understand by starting with the sample code of the custom machine model, and see how it is converted into standard AAS components: Submodels and Reference Elements. First, we'll look at one of the mapping rules defined to transform custom models to standard AAS models. Let's use this sample code [file](https://github.com/Azure-Samples/aas-digital-factory/blob/main/src/AasFactory.Azure.Functions.ModelDataFlow/Services/AasConverters/MachineConverter.cs) as reference. This piece of code does the necessary conversion to standard models.
 
-Here is an example AAS machine as per the `Contoso` data model, represented as JSON:
+Here is an example AAS machine as per the Contoso data model, represented as JSON:
 
 ```json
 {
@@ -178,7 +178,7 @@ Once we've transformed the input data to a standard format, this data is ready t
 
 Below is the ADT representation of the Seattle Factory (1 line, 2 machines, 1 machine type).
 
-![The ADT representation of the Seattle Factory (1 line, 2 machines, 1 machine type).](./assets/seattle-factory-adt-graph.png)
+![The ADT representation of the Seattle Factory (1 line, 2 machines, 1 machine type).](./assets/seattle-factory-adt-graph-small.png)
 
 The AAS-format factory data is converted to DTDL-specific format to be able to create digital twins and relationships on ADT. These DTDL models are pre-defined in the [Asset Administration Shell (AAS) ontology](https://github.com/digitaltwinconsortium/ManufacturingOntologies/tree/main/Ontologies/AssetAdminShell).
 
