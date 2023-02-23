@@ -5,6 +5,7 @@
     - [Software pre-requisites](#software-pre-requisites)
   - [Setup and Deployment](#setup-and-deployment)
 - [More Links](#more-links)
+- [Trademarks](#trademarks)
 
 This repository contains all required components to integrate the services with Azure Event hubs and Azure Digital Twins.
 
@@ -151,3 +152,7 @@ any tools and components that may be used during the development (such as event 
 
 - The project uses [central package management feature](https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management).
 All C# projects that need to install a nuget package should specify the version of the nuget package in [Directory.Packages.props](./Directory.Packages.props).
+
+## Trademarks
+
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow Microsoft’s Trademark & Brand Guidelines. Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party’s policies.
